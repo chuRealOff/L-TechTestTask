@@ -15,7 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: windowScene)
-		let viewController = DevExamViewController()
+		let presenter = DevExamPresenter()
+		let interactor = DevExamInteractor(presenter: presenter)
+		let viewController = DevExamViewController(interactor: interactor)
 		window.rootViewController = viewController
 		window.makeKeyAndVisible()
 		self.window = window

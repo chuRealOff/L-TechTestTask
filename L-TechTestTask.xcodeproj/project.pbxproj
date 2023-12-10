@@ -12,6 +12,8 @@
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
 		ABCF8D972B24FAB800FB8DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */; };
 		ABCF8D9A2B24FAB800FB8DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */; };
+		ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */; };
+		ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EE2B26449800C75164 /* DevExamPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABCF8D992B24FAB800FB8DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractor.swift; sourceTree = "<group>"; };
+		ABF206EE2B26449800C75164 /* DevExamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,30 @@
 			children = (
 				ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */,
 				ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */,
-				ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */,
+				ABF206EA2B26423700C75164 /* Scenes */,
 				ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */,
 				ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */,
 				ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */,
 			);
 			path = "L-TechTestTask";
+			sourceTree = "<group>";
+		};
+		ABF206EA2B26423700C75164 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				ABF206EB2B26429900C75164 /* DevExam */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		ABF206EB2B26429900C75164 /* DevExam */ = {
+			isa = PBXGroup;
+			children = (
+				ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */,
+				ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */,
+				ABF206EE2B26449800C75164 /* DevExamPresenter.swift */,
+			);
+			path = DevExam;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +158,9 @@
 			files = (
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
 				ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */,
+				ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */,
 				ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */,
+				ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
