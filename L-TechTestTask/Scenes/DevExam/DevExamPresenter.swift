@@ -8,15 +8,17 @@
 import Foundation
 
 protocol IDevExamPresenter {
-	func present()
+	/// Сообщает презентеру, что нужно отобразить.
+	/// - Parameter newsData: массив данных для отображения на экране контроллера.
+	func present(with newsData: [NewsModel])
 }
 
 final class DevExamPresenter: IDevExamPresenter {
 	// MARK: - Parameters
-	weak private var viewController: IDevExamViewController?
+	weak var viewController: IDevExamViewController?
 
 	// MARK: - Protocol Implementation
-	func present() {
-		//
+	func present(with newsData: [NewsModel]) {
+		viewController?.viewRender(with: newsData)
 	}
 }

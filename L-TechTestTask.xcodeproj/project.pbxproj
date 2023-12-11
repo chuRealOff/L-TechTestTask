@@ -14,6 +14,9 @@
 		ABCF8D9A2B24FAB800FB8DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */; };
 		ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */; };
 		ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EE2B26449800C75164 /* DevExamPresenter.swift */; };
+		ABF206F12B26509400C75164 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F02B26509400C75164 /* NewsModel.swift */; };
+		ABF206F32B2664E000C75164 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F22B2664E000C75164 /* Constants.swift */; };
+		ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F52B27274800C75164 /* DevExamWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractor.swift; sourceTree = "<group>"; };
 		ABF206EE2B26449800C75164 /* DevExamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenter.swift; sourceTree = "<group>"; };
+		ABF206F02B26509400C75164 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		ABF206F22B2664E000C75164 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ABF206F52B27274800C75164 /* DevExamWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +67,7 @@
 				ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */,
 				ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */,
 				ABF206EA2B26423700C75164 /* Scenes */,
-				ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */,
-				ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */,
-				ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */,
+				ABF206F42B26652900C75164 /* Supporting */,
 			);
 			path = "L-TechTestTask";
 			sourceTree = "<group>";
@@ -81,9 +85,22 @@
 			children = (
 				ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */,
 				ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */,
+				ABF206F52B27274800C75164 /* DevExamWorker.swift */,
 				ABF206EE2B26449800C75164 /* DevExamPresenter.swift */,
+				ABF206F02B26509400C75164 /* NewsModel.swift */,
 			);
 			path = DevExam;
+			sourceTree = "<group>";
+		};
+		ABF206F42B26652900C75164 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				ABF206F22B2664E000C75164 /* Constants.swift */,
+				ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */,
+				ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */,
+				ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF206F12B26509400C75164 /* NewsModel.swift in Sources */,
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
+				ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */,
 				ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */,
 				ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */,
+				ABF206F32B2664E000C75164 /* Constants.swift in Sources */,
 				ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */,
 				ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */,
 			);
@@ -306,7 +326,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 595NK55QRF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "L-TechTestTask/Info.plist";
+				INFOPLIST_FILE = "L-TechTestTask/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -334,7 +354,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 595NK55QRF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "L-TechTestTask/Info.plist";
+				INFOPLIST_FILE = "L-TechTestTask/Supporting/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

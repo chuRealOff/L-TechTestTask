@@ -16,8 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: windowScene)
 		let presenter = DevExamPresenter()
-		let interactor = DevExamInteractor(presenter: presenter)
+		let worker = DevExamWorker()
+		let interactor = DevExamInteractor(presenter: presenter, worker: worker)
 		let viewController = DevExamViewController(interactor: interactor)
+		presenter.viewController = viewController
 		window.rootViewController = viewController
 		window.makeKeyAndVisible()
 		self.window = window

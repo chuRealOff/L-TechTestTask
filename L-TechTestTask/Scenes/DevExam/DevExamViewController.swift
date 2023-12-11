@@ -8,11 +8,14 @@
 import UIKit
 
 protocol IDevExamViewController: AnyObject {
-	func viewRender()
+	/// Запись в массив данных  контроллера и отображение содержимого массива на экране.
+	/// - Parameter news: массив данных, необходимых контроллеру для отображения.
+	func viewRender(with news: [NewsModel])
 }
 
 final class DevExamViewController: UITabBarController {
 	// MARK: - Parameters
+	private var newsData: [NewsModel] = []
 	private let interactor: IDevExamInteractor
 
 	// MARK: - Initializers
@@ -28,16 +31,16 @@ final class DevExamViewController: UITabBarController {
 	// MARK: - ViewController Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		interactor.viewIsReady()
 	}
 
 
 }
 
+// MARK: - IDevExamViewController Implementation
 extension DevExamViewController: IDevExamViewController {
-	func viewRender() {
-		//
+	func viewRender(with news: [NewsModel]) {
+		newsData = news
 	}
-	
 
 }
