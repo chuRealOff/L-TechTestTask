@@ -23,3 +23,37 @@ extension ICoordinator {
 		finishDelegate?.didFinish(self)
 	}
 }
+
+protocol IAppCoordinator: ICoordinator {
+	func showAuthorizationSceneFlow()
+	func showDevExamSceneFlow()
+}
+
+final class AppCoordinator: IAppCoordinator {
+	var navigationController: UINavigationController
+	
+	var childCoordinators: [ICoordinator]
+
+	var finishDelegate: ICoordinatorFinishDelegate?
+
+	init(navigationController: UINavigationController, childCoordinators: [ICoordinator]) {
+		self.navigationController = navigationController
+		self.childCoordinators = childCoordinators
+	}
+
+	func start() {
+		//
+	}
+	
+	func showAuthorizationSceneFlow() {
+		//
+	}
+
+	func showDevExamSceneFlow() {
+		//
+	}
+}
+
+protocol IDevExamSceneCoordinator {
+	func showDevExamDetailSceneFlow()
+}
