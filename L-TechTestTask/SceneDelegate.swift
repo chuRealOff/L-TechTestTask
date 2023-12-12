@@ -15,14 +15,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: windowScene)
+
+		let navigationController = UINavigationController(rootViewController: assembleDevExamScene())
+		let appCoordinator = AppCoordinator(navigationController: navigationController, childCoordinators: [])
+
+		window.rootViewController = navigationController
+		window.makeKeyAndVisible()
+
+		appCoordinator.start()
+
+		self.window = window
+	}
+
+	/// Проводит сборку DevExam сцены.
+	/// - Returns: DevExam контроллер.
+	private func assembleDevExamScene() -> UIViewController {
 		let presenter = DevExamPresenter()
 		let worker = DevExamWorker()
 		let interactor = DevExamInteractor(presenter: presenter, worker: worker)
 		let viewController = DevExamViewController(interactor: interactor)
 		presenter.viewController = viewController
-		window.rootViewController = viewController
-		window.makeKeyAndVisible()
-		self.window = window
+
+		return viewController
 	}
 
 	func sceneDidDisconnect(_ scene: UIScene) {
