@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB12DE2E2B28F621007844CD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* Coordinator.swift */; };
+		AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */; };
 		AB42C4FF2B29AAE500CE98CD /* DevExamAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */; };
+		AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5002B2A493D00CE98CD /* ICoordinators.swift */; };
+		AB42C5042B2A49E900CE98CD /* Ext+Coordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5032B2A49E900CE98CD /* Ext+Coordinators.swift */; };
+		AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */; };
+		AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */; };
 		ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */; };
 		ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */; };
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
@@ -22,8 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB12DE2D2B28F621007844CD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
 		AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamAssembler.swift; sourceTree = "<group>"; };
+		AB42C5002B2A493D00CE98CD /* ICoordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinators.swift; sourceTree = "<group>"; };
+		AB42C5032B2A49E900CE98CD /* Ext+Coordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Coordinators.swift"; sourceTree = "<group>"; };
+		AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
 		ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L-TechTestTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB42C5022B2A494200CE98CD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C5002B2A493D00CE98CD /* ICoordinators.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AB42C5052B2A4A2E00CE98CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C5032B2A49E900CE98CD /* Ext+Coordinators.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB42C5082B2A4AF900CE98CD /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		ABCF8D812B24FAB600FB8DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +103,8 @@
 				ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */,
 				ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */,
 				ABF206EA2B26423700C75164 /* Scenes */,
+				AB42C5022B2A494200CE98CD /* Protocols */,
+				AB42C5052B2A4A2E00CE98CD /* Extensions */,
 				ABF206F42B26652900C75164 /* Supporting */,
 			);
 			path = "L-TechTestTask";
@@ -79,6 +113,8 @@
 		ABF206EA2B26423700C75164 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */,
+				AB42C5082B2A4AF900CE98CD /* Authorization */,
 				ABF206EB2B26429900C75164 /* DevExam */,
 			);
 			path = Scenes;
@@ -92,7 +128,7 @@
 				ABF206F52B27274800C75164 /* DevExamWorker.swift */,
 				ABF206EE2B26449800C75164 /* DevExamPresenter.swift */,
 				ABF206F02B26509400C75164 /* NewsModel.swift */,
-				AB12DE2D2B28F621007844CD /* Coordinator.swift */,
+				AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */,
 				AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */,
 			);
 			path = DevExam;
@@ -181,14 +217,18 @@
 			files = (
 				ABF206F12B26509400C75164 /* NewsModel.swift in Sources */,
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
+				AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */,
 				ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */,
+				AB42C5042B2A49E900CE98CD /* Ext+Coordinators.swift in Sources */,
 				ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */,
 				ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */,
 				ABF206F32B2664E000C75164 /* Constants.swift in Sources */,
 				ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */,
 				AB42C4FF2B29AAE500CE98CD /* DevExamAssembler.swift in Sources */,
+				AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */,
+				AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */,
 				ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */,
-				AB12DE2E2B28F621007844CD /* Coordinator.swift in Sources */,
+				AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
