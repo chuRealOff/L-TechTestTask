@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IDevExamPresenter {
-	/// Сообщает презентеру, что нужно отобразить.
+	/// Сообщает презентеру данные, необходимые для передачи контроллеру..
 	/// - Parameter newsData: массив данных для отображения на экране контроллера.
 	func present(with newsData: [NewsModel])
 }

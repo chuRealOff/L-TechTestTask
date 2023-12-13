@@ -14,7 +14,7 @@ protocol IDevExamViewController: AnyObject {
 }
 
 final class DevExamViewController: UITabBarController {
-	// MARK: - Parameters
+	// MARK: - Private Properties
 	private var newsData: [NewsModel] = []
 	private let interactor: IDevExamInteractor
 
@@ -33,8 +33,6 @@ final class DevExamViewController: UITabBarController {
 		super.viewDidLoad()
 		interactor.viewIsReady()
 	}
-
-
 }
 
 // MARK: - IDevExamViewController Implementation

@@ -8,7 +8,7 @@
 import Foundation
 
 
-/// Модель данных для отображения на основном экране.
+/// Модель данных для декодирования.
 struct NewsModel: Decodable {
 	let id: String
 	let title: String

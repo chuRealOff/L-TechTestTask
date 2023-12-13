@@ -25,35 +25,90 @@ extension ICoordinator {
 }
 
 protocol IAppCoordinator: ICoordinator {
-	func showAuthorizationSceneFlow()
+	func showLoginSceneFlow()
 	func showDevExamSceneFlow()
+}
+
+protocol IAuthorizationCoordinator: ICoordinator {
+	func showLoginSceneFlow()
+}
+
+protocol IDevExamCoordinator: ICoordinator {
+	func showDevExamSceneFlow()
+	func showDevExamDetailSceneFlow()
 }
 
 final class AppCoordinator: IAppCoordinator {
 	var navigationController: UINavigationController
 	
-	var childCoordinators: [ICoordinator]
+	var childCoordinators: [ICoordinator] = []
 
 	var finishDelegate: ICoordinatorFinishDelegate?
 
-	init(navigationController: UINavigationController, childCoordinators: [ICoordinator]) {
+	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
-		self.childCoordinators = childCoordinators
 	}
 
 	func start() {
-		//
+		showDevExamSceneFlow() // изменить на логин сцену
 	}
-	
-	func showAuthorizationSceneFlow() {
-		//
+
+	func showLoginSceneFlow() {
+		let authorizationCoordinator = AuthorizationCoordinator(navigationController: navigationController)
+		childCoordinators.append(authorizationCoordinator)
+		authorizationCoordinator.start()
 	}
 
 	func showDevExamSceneFlow() {
+		let devExamCoordinator = DevExamCoordinator(navigationController: navigationController)
+		childCoordinators.append(devExamCoordinator)
+		devExamCoordinator.start()
+	}
+}
+
+final class AuthorizationCoordinator: IAuthorizationCoordinator {
+	
+	var navigationController: UINavigationController
+
+	var childCoordinators: [ICoordinator] = []
+
+	var finishDelegate: ICoordinatorFinishDelegate?
+
+	init(navigationController: UINavigationController) {
+		self.navigationController = navigationController
+	}
+
+	func start() {
+		showLoginSceneFlow()
+	}
+
+	func showLoginSceneFlow() {
 		//
 	}
 }
 
-protocol IDevExamSceneCoordinator {
-	func showDevExamDetailSceneFlow()
+final class DevExamCoordinator: IDevExamCoordinator {
+	
+	var navigationController: UINavigationController
+
+	var childCoordinators: [ICoordinator] = []
+
+	var finishDelegate: ICoordinatorFinishDelegate?
+
+	init(navigationController: UINavigationController) {
+		self.navigationController = navigationController
+	}
+
+	func start() {
+		showDevExamSceneFlow()
+	}
+
+	func showDevExamSceneFlow() {
+		let devExamController = DevExamAssembler().assemble()
+		navigationController.pushViewController(devExamController, animated: true)
+	}
+
+	func showDevExamDetailSceneFlow() {
+		//
+	}
 }
