@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol IDevExamViewController: AnyObject {
 	/// Запись в массив данных  контроллера и отображение содержимого массива на экране.
@@ -17,6 +18,7 @@ final class DevExamViewController: UITabBarController {
 	// MARK: - Private Properties
 	private var newsData: [NewsModel] = []
 	private let interactor: IDevExamInteractor
+	private var tableView = UITableView()
 
 	// MARK: - Initializers
 	init(interactor: IDevExamInteractor) {
