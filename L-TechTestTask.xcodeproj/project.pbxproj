@@ -14,6 +14,7 @@
 		AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */; };
 		AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */; };
 		AB42C50D2B2A54C200CE98CD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB42C50C2B2A54C200CE98CD /* SnapKit */; };
+		AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */; };
 		ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */; };
 		ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */; };
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
@@ -33,6 +34,7 @@
 		AB42C5032B2A49E900CE98CD /* ICoordinator+finish().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ICoordinator+finish().swift"; sourceTree = "<group>"; };
 		AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamTableViewCellModel.swift; sourceTree = "<group>"; };
 		ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L-TechTestTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = Authorization;
 			sourceTree = "<group>";
 		};
+		AB42C5122B2B152A00CE98CD /* DevExamTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */,
+			);
+			path = DevExamTableViewCell;
+			sourceTree = "<group>";
+		};
 		ABCF8D812B24FAB600FB8DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		ABF206EB2B26429900C75164 /* DevExam */ = {
 			isa = PBXGroup;
 			children = (
+				AB42C5122B2B152A00CE98CD /* DevExamTableViewCell */,
 				ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */,
 				ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */,
 				ABF206F52B27274800C75164 /* DevExamWorker.swift */,
@@ -224,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF206F12B26509400C75164 /* NewsModel.swift in Sources */,
+				AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */,
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
 				AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */,
 				ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */,
