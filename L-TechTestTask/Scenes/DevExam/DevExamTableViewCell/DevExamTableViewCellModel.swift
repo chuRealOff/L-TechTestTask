@@ -44,7 +44,33 @@ final class DevExamTableViewCell: UITableViewCell {
 
 	// MARK: - Setup UI Layout
 	private func UILayout() {
+		contentView.addSubview(myImageView)
+		contentView.addSubview(titleLabel)
+		contentView.addSubview(dateLabel)
 
+		myImageView.snp.makeConstraints { make in
+			make.width.height.equalTo(80)
+			make.centerY.leading.equalToSuperview()
+		}
+
+		titleLabel.snp.makeConstraints { make in
+			make.top.equalTo(myImageView.snp.top)
+			make.leading.equalTo(myImageView.snp.trailing)
+			make.trailing.equalToSuperview().offset(-10)
+			make.height.equalTo(20)
+		}
+
+		txtLabel.snp.makeConstraints { make in
+			make.top.equalTo(titleLabel.snp.bottom)
+			make.leading.trailing.equalTo(titleLabel)
+			make.bottom.equalTo(myImageView)
+		}
+
+		dateLabel.snp.makeConstraints { make in
+			make.top.equalTo(txtLabel.snp.bottom)
+			make.leading.trailing.equalTo(txtLabel)
+			make.bottom.equalToSuperview()
+		}
 	}
 
 	// MARK: - UI Elements Creation
