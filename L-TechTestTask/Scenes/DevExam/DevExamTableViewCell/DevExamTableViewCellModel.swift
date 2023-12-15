@@ -46,6 +46,7 @@ final class DevExamTableViewCell: UITableViewCell {
 	private func UILayout() {
 		contentView.addSubview(myImageView)
 		contentView.addSubview(titleLabel)
+		contentView.addSubview(txtLabel)
 		contentView.addSubview(dateLabel)
 
 		myImageView.snp.makeConstraints { make in
