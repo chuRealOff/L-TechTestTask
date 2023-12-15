@@ -14,16 +14,14 @@ final class DevExamTableViewCell: UITableViewCell {
 
 	// MARK: - UI Elements
 	private lazy var myImageView: UIImageView = makeImageView()
-
 	private lazy var titleLabel: UILabel = makeTitleLabel()
-
 	private lazy var txtLabel: UILabel = makeTextLabel()
-
 	private lazy var dateLabel: UILabel = makeDateLabel()
 
 	// MARK: - Initializers
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		UILayout()
 	}
 	
 	required init?(coder: NSCoder) {
@@ -31,19 +29,25 @@ final class DevExamTableViewCell: UITableViewCell {
 	}
 
 	// MARK: - Configuration
+	/// Наполняет свойства ячейки данными из модели.
 	func configure(
 		with image: UIImage,
-		titleString: String,
-		textString: String,
-		dateString: String
+		title: String,
+		text: String,
+		date: String
 	) {
 		self.myImageView.image = image
-		self.titleLabel.text = titleString
-		self.txtLabel.text = textString
-		self.dateLabel.text = dateString
+		self.titleLabel.text = title
+		self.txtLabel.text = text
+		self.dateLabel.text = date
 	}
 
-	// MARK: - UI Creation
+	// MARK: - Setup UI Layout
+	private func UILayout() {
+
+	}
+
+	// MARK: - UI Elements Creation
 	private func makeImageView() -> UIImageView {
 		let imageView = UIImageView()
 		imageView.contentMode = .scaleAspectFit

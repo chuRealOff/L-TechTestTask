@@ -62,7 +62,6 @@ final class DevExamViewController: UITabBarController {
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
 		view.addSubview(tableView)
-//		tableView.translatesAutoresizingMaskIntoConstraints = false
 
 		tableView.snp.makeConstraints { make in
 			make.top.equalToSuperview()
