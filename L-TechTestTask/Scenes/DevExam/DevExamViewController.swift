@@ -46,7 +46,7 @@ final class DevExamViewController: UITabBarController {
 	private func tabBarControllerSetup() {
 
 	}
-	
+
 	/// Создаёт таблицу для  свойства своего класса.
 	private func makeTableView() -> UITableView {
 		let tableView = UITableView()

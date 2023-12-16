@@ -8,7 +8,7 @@
 import UIKit
 
 /// Метод для завершения работы координатора сцены.
-protocol ICoordinatorFinishDelegate {
+protocol ICoordinatorFinishDelegate: AnyObject {
 	func didFinish(_ coordinator: ICoordinator )
 }
 

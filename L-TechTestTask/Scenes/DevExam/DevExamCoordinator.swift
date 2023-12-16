@@ -8,11 +8,8 @@ import UIKit
 
 /// Координатор основного экрана.
 final class DevExamCoordinator: IDevExamCoordinator {
-	
 	var navigationController: UINavigationController
-
 	var childCoordinators: [ICoordinator] = []
-
 	var finishDelegate: ICoordinatorFinishDelegate?
 
 	init(navigationController: UINavigationController) {

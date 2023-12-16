@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 /// Модель данных для декодирования.
 struct NewsModel: Decodable {
 	let id: String

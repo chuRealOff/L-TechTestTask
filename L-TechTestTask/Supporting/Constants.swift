@@ -8,4 +8,3 @@
 enum Constants {
 	static let urlString = "http://dev-exam.l-tech.ru/api/v1/posts"
 }
-

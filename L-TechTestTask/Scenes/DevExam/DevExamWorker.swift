@@ -18,9 +18,12 @@ final class DevExamWorker: IDevExamWorker {
 		guard let url = URL(string: endPoint) else { return }
 		let request = URLRequest(url: url)
 
-
 		let session = URLSession.shared
-		session.dataTask(with: request) { data, response, error in
+		session.dataTask(with: request) { data, _, error in
+			if let error = error {
+				fatalError(error.localizedDescription)
+			}
+
 			guard let data = data else { return }
 
 			do {
