@@ -19,6 +19,7 @@ final class DevExamViewController: UITabBarController {
 	private var newsData: [NewsModel] = []
 	private let interactor: IDevExamInteractor
 	lazy private var tableView: UITableView = makeTableView()
+	lazy private var sortButton: UIButton = makeSortButton()
 
 	// MARK: - Initializers
 	init(interactor: IDevExamInteractor) {
@@ -45,6 +46,15 @@ final class DevExamViewController: UITabBarController {
 	// MARK: - Private Methods
 	private func tabBarControllerSetup() {
 
+	}
+
+	private func makeSortButton() -> UIButton {
+		let button = UIButton()
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+		button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+		button.setTitle("По умолчанию", for: .normal)
+
+		return button
 	}
 
 	/// Создаёт таблицу для  свойства своего класса.
