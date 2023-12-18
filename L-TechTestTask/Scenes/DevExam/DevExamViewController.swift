@@ -88,7 +88,8 @@ final class DevExamViewController: UITabBarController {
 
 		return button
 	}
-
+	
+	/// Добавляет кнопку обновления данных экрана в навигационную панель.
 	private func makeRefreshPageNavigationItem() {
 		navigationController?.navigationBar.tintColor = .black
 		navigationItem.rightBarButtonItem = UIBarButtonItem(
