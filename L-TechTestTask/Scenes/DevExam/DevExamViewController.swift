@@ -41,17 +41,20 @@ final class DevExamViewController: UITabBarController {
 
 	override func viewWillLayoutSubviews() {
 		setupUI()
-		makeRefreshPageNavigationItem()
-	}
-
-	@objc
-	func refreshPage() {
-
 	}
 
 	// MARK: - Private Methods
 	private func tabBarControllerSetup() {
 
+	}
+
+	private func makeSortButton() -> UIButton {
+		let button = UIButton()
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+		button.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+		button.setTitle("По умолчанию", for: .normal)
+
+		return button
 	}
 
 	/// Создаёт таблицу для  свойства своего класса.
@@ -66,57 +69,15 @@ final class DevExamViewController: UITabBarController {
 		return tableView
 	}
 
-	/// Создаёт кнопку сортировки контента на главном экране.
-	private func makeSortButton() -> UIButton {
-		let button = UIButton()
-		button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-		button.tintColor = .black
-
-		let imageAttachment = NSTextAttachment()
-		imageAttachment.image = UIImage(systemName: "arrowtriangle.down.fill")
-
-		let imageString = NSAttributedString(attachment: imageAttachment)
-		let titleString = NSAttributedString(string: "По умолчанию")
-
-		let combination = NSMutableAttributedString()
-		combination.append(NSAttributedString(string: " "))
-		combination.append(titleString)
-		combination.append(imageString)
-
-		button.setAttributedTitle(combination, for: .normal)
-		button.semanticContentAttribute = .forceLeftToRight
-
-		return button
-	}
-	
-	/// Добавляет кнопку обновления данных экрана в навигационную панель.
-	private func makeRefreshPageNavigationItem() {
-		navigationController?.navigationBar.tintColor = .black
-		navigationItem.rightBarButtonItem = UIBarButtonItem(
-			image: UIImage(systemName: "arrow.triangle.2.circlepath"),
-			style: .done,
-			target: self,
-			action: #selector(refreshPage)
-		)
-	}
-
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
 		view.addSubview(tableView)
-		view.addSubview(sortButton)
 
 		tableView.snp.makeConstraints { make in
 			make.top.equalToSuperview()
 			make.leading.equalToSuperview()
 			make.trailing.equalToSuperview()
 			make.bottom.equalToSuperview()
-		}
-
-		sortButton.snp.makeConstraints { make in
-			make.width.equalTo(130)
-			make.height.equalTo(20)
-			make.leading.equalToSuperview().offset(16)
-			make.top.equalToSuperview().offset(90)
 		}
 	}
 }
