@@ -16,6 +16,7 @@
 		AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */; };
 		AB949BEF2B2DB6B900FA7E8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BEE2B2DB6B900FA7E8D /* SnapKit */; };
 		AB949BF12B2DB6B900FA7E8D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BF02B2DB6B900FA7E8D /* SnapKit-Dynamic */; };
+		AB949BF42B2E592D00FA7E8D /* generate_swifttlint_filelist.sh in Resources */ = {isa = PBXBuildFile; fileRef = AB949BF32B2E592D00FA7E8D /* generate_swifttlint_filelist.sh */; };
 		ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */; };
 		ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */; };
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
@@ -36,6 +37,7 @@
 		AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
 		AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamTableViewCellModel.swift; sourceTree = "<group>"; };
+		AB949BF32B2E592D00FA7E8D /* generate_swifttlint_filelist.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = generate_swifttlint_filelist.sh; sourceTree = "<group>"; };
 		ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L-TechTestTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				ABF206F22B2664E000C75164 /* Constants.swift */,
 				ABCF8D962B24FAB800FB8DB4 /* Assets.xcassets */,
+				AB949BF32B2E592D00FA7E8D /* generate_swifttlint_filelist.sh */,
 				ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */,
 				ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCF8D9A2B24FAB800FB8DB4 /* LaunchScreen.storyboard in Resources */,
+				AB949BF42B2E592D00FA7E8D /* generate_swifttlint_filelist.sh in Resources */,
 				ABCF8D972B24FAB800FB8DB4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +248,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		AB949BF22B2DB87100FA7E8D /* SwiftLint Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 12;
 			files = (
 			);

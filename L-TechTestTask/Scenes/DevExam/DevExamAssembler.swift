@@ -8,8 +8,8 @@
 import UIKit
 
 final class DevExamAssembler {
-	/// Проводит сборку всех DevExam  сцены приложения.
-	/// - Returns: Возвращает DevExam контроллер.
+	/// Проводит сборку DevExam  сцены приложения.
+	/// - Returns: DevExam контроллер.
 	func assemble() -> UIViewController {
 		let presenter = DevExamPresenter()
 		let worker = DevExamWorker()
