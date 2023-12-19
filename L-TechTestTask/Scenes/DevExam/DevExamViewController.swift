@@ -11,12 +11,12 @@ import SnapKit
 protocol IDevExamViewController: AnyObject {
 	/// Запись в массив данных  контроллера и отображение содержимого массива на экране.
 	/// - Parameter news: массив данных, необходимых контроллеру для отображения.
-	func viewRender(with news: [NewsModel])
+	func viewRender(with news: [DTO.News])
 }
 
 final class DevExamViewController: UITabBarController {
 	// MARK: - Private Properties
-	private var newsData: [NewsModel] = []
+	private var newsData: [DTO.NewsRawModel] = []
 	private let interactor: IDevExamInteractor
 	lazy private var tableView: UITableView = makeTableView()
 	lazy private var sortButton: UIButton = makeSortButton()
@@ -143,7 +143,7 @@ extension DevExamViewController: UITableViewDataSource {
 
 // MARK: - IDevExamViewController Implementation
 extension DevExamViewController: IDevExamViewController {
-	func viewRender(with news: [NewsModel]) {
+	func viewRender(with news: [DTO.NewsRawModel]) {
 		newsData = news
 	}
 

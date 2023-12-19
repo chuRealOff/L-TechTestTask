@@ -16,6 +16,7 @@
 		AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */; };
 		AB949BEF2B2DB6B900FA7E8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BEE2B2DB6B900FA7E8D /* SnapKit */; };
 		AB949BF12B2DB6B900FA7E8D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BF02B2DB6B900FA7E8D /* SnapKit-Dynamic */; };
+		AB953F372B319BB5005B625B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB953F362B319BB5005B625B /* Kingfisher */; };
 		ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */; };
 		ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */; };
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
@@ -23,7 +24,7 @@
 		ABCF8D9A2B24FAB800FB8DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */; };
 		ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */; };
 		ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206EE2B26449800C75164 /* DevExamPresenter.swift */; };
-		ABF206F12B26509400C75164 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F02B26509400C75164 /* NewsModel.swift */; };
+		ABF206F12B26509400C75164 /* NewsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F02B26509400C75164 /* NewsModels.swift */; };
 		ABF206F32B2664E000C75164 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F22B2664E000C75164 /* Constants.swift */; };
 		ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F52B27274800C75164 /* DevExamWorker.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +46,7 @@
 		ABCF8D9B2B24FAB800FB8DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractor.swift; sourceTree = "<group>"; };
 		ABF206EE2B26449800C75164 /* DevExamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenter.swift; sourceTree = "<group>"; };
-		ABF206F02B26509400C75164 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		ABF206F02B26509400C75164 /* NewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModels.swift; sourceTree = "<group>"; };
 		ABF206F22B2664E000C75164 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABF206F52B27274800C75164 /* DevExamWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB953F372B319BB5005B625B /* Kingfisher in Frameworks */,
 				AB949BEF2B2DB6B900FA7E8D /* SnapKit in Frameworks */,
 				AB949BF12B2DB6B900FA7E8D /* SnapKit-Dynamic in Frameworks */,
 			);
@@ -150,9 +152,9 @@
 				ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */,
 				ABF206F52B27274800C75164 /* DevExamWorker.swift */,
 				ABF206EE2B26449800C75164 /* DevExamPresenter.swift */,
-				ABF206F02B26509400C75164 /* NewsModel.swift */,
 				AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */,
 				AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */,
+				ABF206F02B26509400C75164 /* NewsModels.swift */,
 			);
 			path = DevExam;
 			sourceTree = "<group>";
@@ -188,6 +190,7 @@
 			packageProductDependencies = (
 				AB949BEE2B2DB6B900FA7E8D /* SnapKit */,
 				AB949BF02B2DB6B900FA7E8D /* SnapKit-Dynamic */,
+				AB953F362B319BB5005B625B /* Kingfisher */,
 			);
 			productName = "L-TechTestTask";
 			productReference = ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */;
@@ -219,6 +222,7 @@
 			mainGroup = ABCF8D812B24FAB600FB8DB4;
 			packageReferences = (
 				AB949BED2B2DB6B900FA7E8D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AB953F352B319BB5005B625B /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ABCF8D8B2B24FAB600FB8DB4 /* Products */;
 			projectDirPath = "";
@@ -268,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF206F12B26509400C75164 /* NewsModel.swift in Sources */,
+				ABF206F12B26509400C75164 /* NewsModels.swift in Sources */,
 				AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */,
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
 				AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */,
@@ -337,7 +341,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -400,7 +404,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -509,6 +513,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		AB953F352B319BB5005B625B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -521,6 +533,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AB949BED2B2DB6B900FA7E8D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
+		};
+		AB953F362B319BB5005B625B /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB953F352B319BB5005B625B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
