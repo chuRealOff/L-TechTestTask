@@ -14,7 +14,7 @@ enum DTO {
 		let id: String
 		let title: String
 		let text: String
-		let imageRelativePath: String
+		let image: String
 		let sort: Int
 		let date: String
 	}
@@ -24,7 +24,7 @@ enum DTO {
 		let title: String
 		let text: String
 		let sort: Int
-		let date: Date
-		let images: [UIImage]
+		let date: String
+		let image: UIImage?
 	}
 }

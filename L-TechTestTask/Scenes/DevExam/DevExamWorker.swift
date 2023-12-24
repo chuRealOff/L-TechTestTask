@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import Kingfisher
 import UIKit
+import Kingfisher
 
 protocol IDevExamWorker {
 	/// Загружает данные из сети.
@@ -32,20 +32,44 @@ final class DevExamWorker: IDevExamWorker {
 				let jsonDecoder = JSONDecoder()
 				let newsData = try jsonDecoder.decode([DTO.NewsRawModel].self, from: data)
 
-				var imageViews = [UIImageView]()
-				for number in 0...newsData.count {
-					for event in newsData {
-						let baseURL = "https://dev-exam.l-tech.ru"
-						let relativePath = event.imageRelativePath
-						let fullURL = URL(string: baseURL + relativePath)
-
-						imageViews[number].kf.setImage(with: fullURL)
+				DispatchQueue.main.async {
+					self.fetchImages(from: newsData) { images in
+						completion(newsData, images)
 					}
 				}
-				completion(newsData, imageViews)
 			} catch {
+				print("json decoding error: \(error).")
 				fatalError("Unable to load json data.")
 			}
 		}.resume()
+	}
+
+	private func fetchImages(from data: [DTO.NewsRawModel], completion: @escaping ([UIImageView]) -> Void) {
+		var imageViews = [UIImageView]()
+		let baseURL = Constants.baseURLString
+		let dispatchGroup = DispatchGroup()
+
+		for event in data {
+			let relativePath = event.image
+
+			if let fullPath = URL(string: baseURL + relativePath) {
+
+				dispatchGroup.enter()
+
+				let imageView = UIImageView()
+				imageView.kf.setImage(with: fullPath) { result in
+					switch result {
+					case .success:
+						imageViews.append(imageView)
+					case .failure(let error):
+						print("Failed to load image: \(error.localizedDescription)")
+					}
+					dispatchGroup.leave()
+				}
+			}
+		}
+		dispatchGroup.notify(queue: .main) {
+			completion(imageViews)
+		}
 	}
 }
