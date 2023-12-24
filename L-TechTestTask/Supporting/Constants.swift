@@ -6,5 +6,6 @@
 //
 
 enum Constants {
-	static let urlString = "http://dev-exam.l-tech.ru/api/v1/posts"
+	static let jsonURLString = "http://dev-exam.l-tech.ru/api/v1/posts"
+	static let baseURLString = "https://dev-exam.l-tech.ru"
 }
