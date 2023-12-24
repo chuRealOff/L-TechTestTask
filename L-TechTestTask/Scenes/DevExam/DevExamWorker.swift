@@ -48,6 +48,7 @@ final class DevExamWorker: IDevExamWorker {
 		var imageViews = [UIImageView]()
 		let baseURL = Constants.baseURLString
 		let dispatchGroup = DispatchGroup()
+		let serialQueue = DispatchQueue(label: "com.example.L-TechTestTask")
 
 		for event in data {
 			let relativePath = event.image
@@ -58,13 +59,17 @@ final class DevExamWorker: IDevExamWorker {
 
 				let imageView = UIImageView()
 				imageView.kf.setImage(with: fullPath) { result in
+					defer {
+						dispatchGroup.leave()
+					}
 					switch result {
 					case .success:
-						imageViews.append(imageView)
+						serialQueue.async {
+							imageViews.append(imageView)
+						}
 					case .failure(let error):
 						print("Failed to load image: \(error.localizedDescription)")
 					}
-					dispatchGroup.leave()
 				}
 			}
 		}

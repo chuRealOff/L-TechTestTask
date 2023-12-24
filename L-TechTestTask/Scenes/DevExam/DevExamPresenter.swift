@@ -49,7 +49,6 @@ final class DevExamPresenter: IDevExamPresenter {
 				date: self.date(dateString: particularData.date),
 				image: image
 			)
-			//				print(story)
 			news.append(story)
 
 		}
@@ -66,7 +65,6 @@ final class DevExamPresenter: IDevExamPresenter {
 		if let date = dateFormatter.date(from: dateString) {
 			dateFormatter.dateFormat = "dd MMMM, HH:mm"
 			let formattedDate = dateFormatter.string(from: date)
-			//			print(formattedDate)
 
 			return formattedDate
 		} else {
