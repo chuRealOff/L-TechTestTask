@@ -32,7 +32,7 @@ final class DevExamInteractor {
 extension DevExamInteractor: IDevExamInteractor {
 	func viewIsReady() {
 		worker.fetchNetworkData(
-			from: Constants.urlString) { news, imageViews in
+			from: Constants.jsonURLString) { news, imageViews in
 				self.presenter.present(with: news, and: imageViews)
 			}
 	}
