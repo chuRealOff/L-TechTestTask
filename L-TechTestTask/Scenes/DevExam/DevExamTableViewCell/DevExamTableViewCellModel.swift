@@ -30,16 +30,11 @@ final class DevExamTableViewCell: UITableViewCell {
 
 	// MARK: - Configuration
 	/// Наполняет свойства ячейки данными из модели.
-	func configure(
-		with image: UIImage,
-		title: String,
-		text: String,
-		date: String
-	) {
-		self.myImageView.image = image
-		self.titleLabel.text = title
-		self.txtLabel.text = text
-		self.dateLabel.text = date
+	func configure(with data: [DTO.News], at indexPath: IndexPath) {
+		self.myImageView.image = data[indexPath.row].image
+		self.titleLabel.text = data[indexPath.row].title
+		self.txtLabel.text = data[indexPath.row].text
+		self.dateLabel.text = data[indexPath.row].date
 	}
 
 	// MARK: - Setup UI Layout
