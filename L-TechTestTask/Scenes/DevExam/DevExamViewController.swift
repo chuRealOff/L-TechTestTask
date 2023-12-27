@@ -107,10 +107,7 @@ final class DevExamViewController: UITabBarController {
 		view.addSubview(sortButton)
 
 		tableView.snp.makeConstraints { make in
-			make.top.equalToSuperview()
-			make.leading.equalToSuperview()
-			make.trailing.equalToSuperview()
-			make.bottom.equalToSuperview()
+			make.edges.equalToSuperview()
 		}
 
 		sortButton.snp.makeConstraints { make in
@@ -136,9 +133,15 @@ extension DevExamViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = DevExamTableViewCell()
+		guard let cell = tableView.dequeueReusableCell(
+			withIdentifier: DevExamTableViewCell.identifier,
+			for: indexPath
+		) as? DevExamTableViewCell else {
+			return UITableViewCell()
+		}
+		cell.configure(with: newsData, at: indexPath)
 
-		return UITableViewCell()
+		return cell
 	}
 }
 
@@ -146,10 +149,6 @@ extension DevExamViewController: UITableViewDataSource {
 extension DevExamViewController: IDevExamViewController {
 	func render(with news: [DTO.News]) {
 		newsData = news
-		newsData.forEach {
-			if $0.image != nil {
-				print($0.image)
-			}
-		}
+		tableView.reloadData()
 	}
 }

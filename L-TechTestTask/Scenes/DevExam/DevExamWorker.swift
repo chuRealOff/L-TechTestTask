@@ -59,16 +59,15 @@ final class DevExamWorker: IDevExamWorker {
 
 				let imageView = UIImageView()
 				imageView.kf.setImage(with: fullPath) { result in
-					defer {
-						dispatchGroup.leave()
-					}
 					switch result {
 					case .success:
 						serialQueue.async {
 							imageViews.append(imageView)
+							dispatchGroup.leave()
 						}
 					case .failure(let error):
 						print("Failed to load image: \(error.localizedDescription)")
+						dispatchGroup.leave()
 					}
 				}
 			}
