@@ -59,7 +59,7 @@ final class DevExamViewController: UITabBarController {
 	private func makeTableView() -> UITableView {
 		let tableView = UITableView()
 		tableView.register(DevExamTableViewCell.self, forCellReuseIdentifier: DevExamTableViewCell.identifier)
-		tableView.backgroundView?.backgroundColor = .yellow
+		tableView.rowHeight = UITableView.automaticDimension
 		tableView.allowsSelection = true
 		tableView.delegate = self
 		tableView.dataSource = self
@@ -103,12 +103,9 @@ final class DevExamViewController: UITabBarController {
 
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
-		view.addSubview(tableView)
+		navigationController?.hidesBarsOnSwipe = true
 		view.addSubview(sortButton)
-
-		tableView.snp.makeConstraints { make in
-			make.edges.equalToSuperview()
-		}
+		view.addSubview(tableView)
 
 		sortButton.snp.makeConstraints { make in
 			make.width.equalTo(130)
@@ -116,6 +113,13 @@ final class DevExamViewController: UITabBarController {
 			make.leading.equalToSuperview().offset(16)
 			make.top.equalToSuperview().offset(90)
 		}
+
+		tableView.snp.makeConstraints { make in
+			make.top.equalTo(sortButton.snp.bottom)
+			make.leading.equalToSuperview().offset(16)
+			make.bottom.trailing.equalToSuperview()
+		}
+
 	}
 }
 
