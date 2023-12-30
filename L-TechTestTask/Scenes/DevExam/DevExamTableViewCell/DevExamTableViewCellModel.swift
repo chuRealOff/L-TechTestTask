@@ -50,8 +50,8 @@ final class DevExamTableViewCell: UITableViewCell {
 		}
 
 		titleLabel.snp.makeConstraints { make in
-			make.top.equalTo(myImageView.snp.top)
-			make.leading.equalTo(myImageView.snp.trailing)
+			make.top.equalToSuperview().offset(10)
+			make.leading.equalTo(myImageView.snp.trailing).offset(10)
 			make.trailing.equalToSuperview().offset(-10)
 			make.height.equalTo(20)
 		}
