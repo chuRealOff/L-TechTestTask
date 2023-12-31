@@ -19,7 +19,7 @@ final class DevExamViewController: UITabBarController {
 	private var newsData: [DTO.News] = []
 	private let interactor: IDevExamInteractor
 	lazy private var tableView: UITableView = makeTableView()
-	lazy private var sortButton: UIButton = makeSortButton()
+	lazy private var filterButton: UIButton = makeSortButton()
 
 	// MARK: - Initializers
 	init(interactor: IDevExamInteractor) {
@@ -104,10 +104,10 @@ final class DevExamViewController: UITabBarController {
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
 		navigationController?.hidesBarsOnSwipe = true
-		view.addSubview(sortButton)
+		view.addSubview(filterButton)
 		view.addSubview(tableView)
 
-		sortButton.snp.makeConstraints { make in
+		filterButton.snp.makeConstraints { make in
 			make.width.equalTo(130)
 			make.height.equalTo(20)
 			make.leading.equalToSuperview().offset(16)
@@ -115,7 +115,7 @@ final class DevExamViewController: UITabBarController {
 		}
 
 		tableView.snp.makeConstraints { make in
-			make.top.equalTo(sortButton.snp.bottom)
+			make.top.equalTo(filterButton.snp.bottom)
 			make.leading.equalToSuperview().offset(16)
 			make.trailing.equalToSuperview()
 			make.bottom.equalTo(tabBar.snp.top)
