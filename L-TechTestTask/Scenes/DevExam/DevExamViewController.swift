@@ -60,6 +60,7 @@ final class DevExamViewController: UITabBarController {
 		let tableView = UITableView()
 		tableView.register(DevExamTableViewCell.self, forCellReuseIdentifier: DevExamTableViewCell.identifier)
 		tableView.rowHeight = UITableView.automaticDimension
+		tableView.estimatedRowHeight = Constants.mainSceneEstimatedRowHeight
 		tableView.allowsSelection = true
 		tableView.delegate = self
 		tableView.dataSource = self
