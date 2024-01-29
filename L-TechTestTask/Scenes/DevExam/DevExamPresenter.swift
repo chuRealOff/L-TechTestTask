@@ -11,13 +11,23 @@ protocol IDevExamPresenter {
 	/// Сообщает презентеру данные, необходимые для передачи контроллеру..
 	/// - Parameter newsData: Массив данных для отображения на экране контроллера.
 	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView])
+
+	/// Подготавливает UIAlertController для последующего отображения на главном экране контроллера.
+	func presentErrorAlert(_ alertController: UIAlertController, withMessage: String)
 }
 
 final class DevExamPresenter: IDevExamPresenter {
 	// MARK: - Dependencies
 	weak var viewController: IDevExamViewController?
 
-	// MARK: - Protocol Implementation
+	// MARK: - Internal Methods
+	func presentErrorAlert(_ alertController: UIAlertController, withMessage message: String) {
+		alertController.title = "An error has occured"
+		alertController.message = message
+		viewController?.showAlert(alertController)
+	}
+
+	// MARK: - IDevExamPresenter Implementation
 	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView]) {
 		let news = prepareDataModel(from: newsData, andFillItWith: pictures)
 		viewController?.render(with: news)
@@ -56,7 +66,7 @@ final class DevExamPresenter: IDevExamPresenter {
 		return news
 	}
 
-	/// Преобразует строковую дату, полученную из сети в нужный нам формат.
+	/// Преобразует строковую дату, полученную из сети в нужный  формат представления.
 	private func date(dateString: String) -> String {
 		let dateFormatter = DateFormatter()
 		dateFormatter.locale = Locale(identifier: "ru_RU")
