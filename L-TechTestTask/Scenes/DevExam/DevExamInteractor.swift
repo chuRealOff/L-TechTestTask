@@ -32,8 +32,14 @@ final class DevExamInteractor {
 extension DevExamInteractor: IDevExamInteractor {
 	func viewIsReady() {
 		worker.fetchNetworkData(
-			from: Constants.jsonURLString) { news, imageViews in
-				self.presenter.present(with: news, and: imageViews)
+			from: Constants.jsonURLString) { [weak self] result in
+				switch result {
+				case let .success((news, imageViews)):
+					self?.presenter.present(with: news, and: imageViews)
+				case .failure(let error):
+					// здесь должен быть вызов функции с алерт контроллером в главном потоке и передачей сообщения об ошибке (rawValue)
+					fatalError(error.rawValue)
+				}
 			}
 	}
 

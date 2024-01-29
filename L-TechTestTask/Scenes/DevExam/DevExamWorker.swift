@@ -12,21 +12,40 @@ import Kingfisher
 protocol IDevExamWorker {
 	/// Загружает данные из сети.
 	/// - Parameter endPoint: URL адрес страницы.
-	func fetchNetworkData(from endPoint: String, completion: @escaping ([DTO.NewsRawModel], [UIImageView]) -> Void)
+	func fetchNetworkData(
+		from endPoint: String,
+		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
+	)
 }
 
 final class DevExamWorker: IDevExamWorker {
-	func fetchNetworkData(from endPoint: String, completion: @escaping ([DTO.NewsRawModel], [UIImageView]) -> Void) {
-		guard let url = URL(string: endPoint) else { return }
+	func fetchNetworkData(
+		from endPoint: String,
+		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
+	) {
+		guard let url = URL(string: endPoint) else {
+			completion(.failure(.invalidURL))
+			return
+		}
+
 		let request = URLRequest(url: url)
 
 		let session = URLSession.shared
-		session.dataTask(with: request) { data, _, error in
+		session.dataTask(with: request) { data, response, error in
 			if let error = error {
-				fatalError(error.localizedDescription)
+				completion(.failure(.unableToComplete))
+				return
 			}
 
-			guard let data = data else { return }
+			guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+				completion(.failure(.invalidResponse))
+				return
+			}
+
+			guard let data = data else {
+				completion(.failure(.invalidData))
+				return
+			}
 
 			do {
 				let jsonDecoder = JSONDecoder()
@@ -34,11 +53,11 @@ final class DevExamWorker: IDevExamWorker {
 
 				DispatchQueue.main.async {
 					self.fetchImages(from: newsData) { images in
-						completion(newsData, images)
+						completion(.success((newsData, images)))
 					}
 				}
 			} catch {
-				print("json decoding error: \(error).")
+				print("json decoding error: \(error.localizedDescription).") // Провести рефакторинг
 				fatalError("Unable to load json data.")
 			}
 		}.resume()
