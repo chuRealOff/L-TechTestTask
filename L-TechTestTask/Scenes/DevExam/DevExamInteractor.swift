@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol IDevExamInteractor {
 	/// Функция сообщает о готовности представления к отображению данных.
@@ -17,7 +18,7 @@ protocol IDevExamInteractor {
 }
 
 final class DevExamInteractor {
-	// MARK: - Parameters
+	// MARK: - Dependencies
 	private let presenter: IDevExamPresenter
 	private let worker: IDevExamWorker
 
@@ -32,13 +33,16 @@ final class DevExamInteractor {
 extension DevExamInteractor: IDevExamInteractor {
 	func viewIsReady() {
 		worker.fetchNetworkData(
-			from: Constants.jsonURLString) { [weak self] result in
+			from: Constants.jsonURLString) { [ weak self] result in
 				switch result {
 				case let .success((news, imageViews)):
 					self?.presenter.present(with: news, and: imageViews)
 				case .failure(let error):
-					// здесь должен быть вызов функции с алерт контроллером в главном потоке и передачей сообщения об ошибке (rawValue)
-					fatalError(error.rawValue)
+					if let alertController = self?.worker.createAlertController() {
+						DispatchQueue.main.async {
+							self?.presenter.presentErrorAlert(alertController, withMessage: error.rawValue)
+						}
+					}
 				}
 			}
 	}
