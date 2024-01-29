@@ -16,9 +16,14 @@ protocol IDevExamWorker {
 		from endPoint: String,
 		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
 	)
+
+	/// Создаёт UIAlertController, ответственный за обработку ошибок сетевых запросов.
+	/// - Parameter message: текст сообщения об ошибке.
+	func createAlertController() -> UIAlertController
 }
 
 final class DevExamWorker: IDevExamWorker {
+	// MARK: - Internal Methods
 	func fetchNetworkData(
 		from endPoint: String,
 		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
@@ -32,7 +37,7 @@ final class DevExamWorker: IDevExamWorker {
 
 		let session = URLSession.shared
 		session.dataTask(with: request) { data, response, error in
-			if let error = error {
+			if error != nil {
 				completion(.failure(.unableToComplete))
 				return
 			}
@@ -94,5 +99,15 @@ final class DevExamWorker: IDevExamWorker {
 		dispatchGroup.notify(queue: .main) {
 			completion(imageViews)
 		}
+	}
+
+	func createAlertController() -> UIAlertController {
+		let alertController = UIAlertController(
+			title: "",
+			message: "",
+			preferredStyle: .alert
+		)
+
+		return alertController
 	}
 }
