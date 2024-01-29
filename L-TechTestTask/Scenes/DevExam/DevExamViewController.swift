@@ -12,12 +12,19 @@ protocol IDevExamViewController: AnyObject {
 	/// Запись в массив данных  контроллера и отображение содержимого массива на экране.
 	/// - Parameter news: массив данных, необходимых контроллеру для отображения.
 	func render(with news: [DTO.News])
+
+	/// Отображает сообщение об ошибке при работе с сетью.
+	func showAlert(_ alertController: UIAlertController)
 }
 
 final class DevExamViewController: UITabBarController {
+	// MARK: - Dependencies
+	private let interactor: IDevExamInteractor
+
 	// MARK: - Private Properties
 	private var newsData: [DTO.News] = []
-	private let interactor: IDevExamInteractor
+
+	// MARK: - UI Elements
 	lazy private var tableView: UITableView = makeTableView()
 	lazy private var filterButton: UIButton = makeSortButton()
 
@@ -48,6 +55,11 @@ final class DevExamViewController: UITabBarController {
 	@objc
 	func refreshPage() {
 
+	}
+
+	// MARK: - Internal Methods
+	func showErrorAlert(_ alertController: UIAlertController) {
+		self.present(alertController, animated: true)
 	}
 
 	// MARK: - Private Methods
@@ -156,5 +168,9 @@ extension DevExamViewController: IDevExamViewController {
 	func render(with news: [DTO.News]) {
 		newsData = news
 		tableView.reloadData()
+	}
+
+	func showAlert(_ alertController: UIAlertController) {
+		self.present(alertController, animated: true)
 	}
 }
