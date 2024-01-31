@@ -44,10 +44,6 @@ final class DevExamViewController: UITabBarController {
 		interactor.viewIsReady()
 		view.backgroundColor = .white
 		title = "Лента новостей"
-	}
-
-	override func viewWillLayoutSubviews() {
-		super.viewWillLayoutSubviews()
 		setupUI()
 		makeRefreshPageNavigationItem()
 	}

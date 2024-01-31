@@ -11,10 +11,10 @@ import UIKit
 class FilterViewController: UIViewController {
 	lazy private var tableView: UITableView = makeTableView()
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-	}
+//	override func viewDidLoad() {
+//		super.viewDidLoad()
+//
+//	}
 
 	// MARK: - Private Methods
 	private func makeTableView() -> UITableView {

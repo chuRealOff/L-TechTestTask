@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */; };
 		AB3E7F452B66654C0046EF6F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E7F442B66654C0046EF6F /* NetworkError.swift */; };
-		AB42C4FF2B29AAE500CE98CD /* DevExamAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */; };
+		AB42C4FF2B29AAE500CE98CD /* Assemblers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* Assemblers.swift */; };
 		AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5002B2A493D00CE98CD /* ICoordinators.swift */; };
 		AB42C5042B2A49E900CE98CD /* ICoordinator+finish().swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5032B2A49E900CE98CD /* ICoordinator+finish().swift */; };
 		AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
 		AB3E7F442B66654C0046EF6F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamAssembler.swift; sourceTree = "<group>"; };
+		AB42C4FE2B29AAE500CE98CD /* Assemblers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assemblers.swift; sourceTree = "<group>"; };
 		AB42C5002B2A493D00CE98CD /* ICoordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinators.swift; sourceTree = "<group>"; };
 		AB42C5032B2A49E900CE98CD /* ICoordinator+finish().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ICoordinator+finish().swift"; sourceTree = "<group>"; };
 		AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -78,7 +78,6 @@
 		AB42C5022B2A494200CE98CD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				AB42C5002B2A493D00CE98CD /* ICoordinators.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -94,7 +93,6 @@
 		AB42C5082B2A4AF900CE98CD /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -121,6 +119,34 @@
 				AB81EC9E2B41911700320BA6 /* FilterViewController.swift */,
 			);
 			path = FilterSheetScreen;
+			sourceTree = "<group>";
+		};
+		AB8641E42B6ACFE1007EF812 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C5002B2A493D00CE98CD /* ICoordinators.swift */,
+				AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */,
+				AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */,
+				AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		AB8641E52B6AD048007EF812 /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				AB42C4FE2B29AAE500CE98CD /* Assemblers.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		AB8641E82B6AD281007EF812 /* NavigationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AB8641E52B6AD048007EF812 /* Assemblers */,
+				AB8641E42B6ACFE1007EF812 /* Coordinators */,
+			);
+			path = NavigationFlow;
 			sourceTree = "<group>";
 		};
 		AB949BEA2B2DB66200FA7E8D /* Frameworks */ = {
@@ -173,7 +199,7 @@
 		ABF206EA2B26423700C75164 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */,
+				AB8641E82B6AD281007EF812 /* NavigationFlow */,
 				AB42C5082B2A4AF900CE98CD /* Authorization */,
 				ABF206EB2B26429900C75164 /* DevExamScene */,
 				ABA098192B6A612000FABC55 /* DevExamDetailScene */,
@@ -190,8 +216,6 @@
 				ABF206EC2B2643E000C75164 /* DevExamInteractor.swift */,
 				ABF206F52B27274800C75164 /* DevExamWorker.swift */,
 				ABF206EE2B26449800C75164 /* DevExamPresenter.swift */,
-				AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */,
-				AB42C4FE2B29AAE500CE98CD /* DevExamAssembler.swift */,
 				ABF206F02B26509400C75164 /* NewsModels.swift */,
 			);
 			path = DevExamScene;
@@ -326,7 +350,7 @@
 				ABA0981F2B6A628700FABC55 /* DevExamDetailPresenter.swift in Sources */,
 				ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */,
 				AB81EC9F2B41911700320BA6 /* FilterViewController.swift in Sources */,
-				AB42C4FF2B29AAE500CE98CD /* DevExamAssembler.swift in Sources */,
+				AB42C4FF2B29AAE500CE98CD /* Assemblers.swift in Sources */,
 				AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */,
 				AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */,
 				ABF206ED2B2643E000C75164 /* DevExamInteractor.swift in Sources */,

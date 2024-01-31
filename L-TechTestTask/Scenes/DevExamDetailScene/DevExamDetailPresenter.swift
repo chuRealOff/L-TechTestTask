@@ -11,7 +11,7 @@ protocol IDevExamDetailPresenter: AnyObject {
 
 }
 
-final class DevExamDetailPresenter {
+final class DevExamDetailPresenter: IDevExamDetailPresenter {
 	// MARK: - Dependencies
 	weak var viewController: IDevExamDetailViewController?
 }

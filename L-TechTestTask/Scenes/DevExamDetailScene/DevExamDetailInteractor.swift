@@ -11,7 +11,7 @@ protocol IDevExamDetailInteractor: AnyObject {
 
 }
 
-final class DevExamDetailInteractor {
+final class DevExamDetailInteractor: IDevExamDetailInteractor {
 	// MARK: - Dependencies
 	private let presenter: IDevExamDetailPresenter
 
