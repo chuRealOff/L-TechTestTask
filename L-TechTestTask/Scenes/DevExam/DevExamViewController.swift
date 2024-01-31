@@ -25,8 +25,8 @@ final class DevExamViewController: UITabBarController {
 	private var newsData: [DTO.News] = []
 
 	// MARK: - UI Elements
-	lazy private var tableView: UITableView = makeTableView()
-	lazy private var filterButton: UIButton = makeSortButton()
+	private lazy var tableView: UITableView = makeTableView()
+	private lazy var filterButton: UIButton = makeSortButton()
 
 	// MARK: - Initializers
 	init(interactor: IDevExamInteractor) {
