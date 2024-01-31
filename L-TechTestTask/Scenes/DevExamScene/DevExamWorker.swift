@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-protocol IDevExamWorker {
+protocol IDevExamWorker: AnyObject {
 	/// Загружает данные из сети.
 	/// - Parameter endPoint: URL адрес страницы.
 	func fetchNetworkData(

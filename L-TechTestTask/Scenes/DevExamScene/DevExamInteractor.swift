@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol IDevExamInteractor {
+protocol IDevExamInteractor: AnyObject {
 	/// Функция сообщает о готовности представления к отображению данных.
 	func viewIsReady()
 

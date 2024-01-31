@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol IDevExamPresenter {
+protocol IDevExamPresenter: AnyObject {
 	/// Сообщает презентеру данные, необходимые для передачи контроллеру..
 	/// - Parameter newsData: Массив данных для отображения на экране контроллера.
 	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView])
