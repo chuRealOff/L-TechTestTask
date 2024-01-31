@@ -6,6 +6,12 @@
 //
 import UIKit
 
+/// Набор методов для реализации координатором основного экрана..
+protocol IDevExamCoordinator: ICoordinator {
+	func showDevExamSceneFlow()
+	func showDevExamDetailSceneFlow()
+}
+
 /// Координатор основного экрана.
 final class DevExamCoordinator: IDevExamCoordinator {
 	var navigationController: UINavigationController

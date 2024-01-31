@@ -35,11 +35,11 @@ final class DevExamDetailViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 
-//	// MARK: - ViewController Lifecycle
-//	override func viewDidLoad() {
-//		super.viewDidLoad()
-//
-//	}
+	// MARK: - ViewController Lifecycle
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		view.backgroundColor = .blue // позже удалить
+	}
 
 	// MARK: - Private Methods
 	private func makeRootScrollView() -> UIScrollView {

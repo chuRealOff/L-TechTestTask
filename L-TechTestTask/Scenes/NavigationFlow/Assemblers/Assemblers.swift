@@ -7,8 +7,17 @@
 
 import UIKit
 
-protocol IAssembler {
+protocol IAssembler: AnyObject {
 	func assemble() -> UIViewController
+}
+
+final class DevExamLoginAuthSceneAssembler: IAssembler {
+	/// Проводит сборку DevExamAuth сцены приложения.
+	/// - Returns: DevExamAuthorization контроллер.
+	func assemble() -> UIViewController {
+
+		return UIViewController()
+	}
 }
 
 final class DevExamAssembler: IAssembler {

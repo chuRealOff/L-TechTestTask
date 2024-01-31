@@ -10,7 +10,7 @@
 		AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */; };
 		AB3E7F452B66654C0046EF6F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E7F442B66654C0046EF6F /* NetworkError.swift */; };
 		AB42C4FF2B29AAE500CE98CD /* Assemblers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* Assemblers.swift */; };
-		AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5002B2A493D00CE98CD /* ICoordinators.swift */; };
+		AB42C5012B2A493D00CE98CD /* ICoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5002B2A493D00CE98CD /* ICoordinatorProtocol.swift */; };
 		AB42C5042B2A49E900CE98CD /* ICoordinator+finish().swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5032B2A49E900CE98CD /* ICoordinator+finish().swift */; };
 		AB42C5072B2A4AB700CE98CD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */; };
 		AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */; };
@@ -38,7 +38,7 @@
 		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
 		AB3E7F442B66654C0046EF6F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AB42C4FE2B29AAE500CE98CD /* Assemblers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assemblers.swift; sourceTree = "<group>"; };
-		AB42C5002B2A493D00CE98CD /* ICoordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinators.swift; sourceTree = "<group>"; };
+		AB42C5002B2A493D00CE98CD /* ICoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinatorProtocol.swift; sourceTree = "<group>"; };
 		AB42C5032B2A49E900CE98CD /* ICoordinator+finish().swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ICoordinator+finish().swift"; sourceTree = "<group>"; };
 		AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
@@ -124,7 +124,8 @@
 		AB8641E42B6ACFE1007EF812 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				AB42C5002B2A493D00CE98CD /* ICoordinators.swift */,
+				AB42C5052B2A4A2E00CE98CD /* Extensions */,
+				AB42C5002B2A493D00CE98CD /* ICoordinatorProtocol.swift */,
 				AB42C5062B2A4AB700CE98CD /* AppCoordinator.swift */,
 				AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */,
 				AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */,
@@ -190,7 +191,6 @@
 				ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */,
 				ABF206EA2B26423700C75164 /* Scenes */,
 				AB42C5022B2A494200CE98CD /* Protocols */,
-				AB42C5052B2A4A2E00CE98CD /* Extensions */,
 				ABF206F42B26652900C75164 /* Supporting */,
 			);
 			path = "L-TechTestTask";
@@ -339,7 +339,7 @@
 				ABF206F12B26509400C75164 /* NewsModels.swift in Sources */,
 				AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */,
 				ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */,
-				AB42C5012B2A493D00CE98CD /* ICoordinators.swift in Sources */,
+				AB42C5012B2A493D00CE98CD /* ICoordinatorProtocol.swift in Sources */,
 				ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */,
 				ABA0981B2B6A618100FABC55 /* DevExamDetailViewController.swift in Sources */,
 				AB42C5042B2A49E900CE98CD /* ICoordinator+finish().swift in Sources */,

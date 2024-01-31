@@ -7,6 +7,12 @@
 
 import UIKit
 
+/// Набор методов для реализации главным координатором.
+protocol IAppCoordinator: ICoordinator {
+	func showAuthSceneFlow()
+	func showDevExamSceneFlow()
+}
+
 /// Старший координатор приложения, содержащий в себе все дочерние.
 final class AppCoordinator: IAppCoordinator {
 	var navigationController: UINavigationController
@@ -23,7 +29,7 @@ final class AppCoordinator: IAppCoordinator {
 		showDevExamSceneFlow() // изменить на логин сцену
 	}
 
-	func showLoginSceneFlow() {
+	func showAuthSceneFlow() {
 		let authorizationCoordinator = AuthorizationCoordinator(navigationController: navigationController)
 		childCoordinators.append(authorizationCoordinator)
 		authorizationCoordinator.start()
