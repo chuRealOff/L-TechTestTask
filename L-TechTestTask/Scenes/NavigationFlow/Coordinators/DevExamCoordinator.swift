@@ -27,11 +27,12 @@ final class DevExamCoordinator: IDevExamCoordinator {
 	}
 
 	func showDevExamSceneFlow() {
-		let devExamController = DevExamAssembler().assemble()
+		let devExamController = DevExamAssembler().assemble(withCoordinator: self)
 		navigationController.pushViewController(devExamController, animated: true)
 	}
 
 	func showDevExamDetailSceneFlow() {
-		//
+		let devExamDetailController = DevExamDetailAssembler().assemble()
+		navigationController.pushViewController(devExamDetailController, animated: true)
 	}
 }
