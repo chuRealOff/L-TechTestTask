@@ -7,37 +7,29 @@
 
 import UIKit
 
-protocol IAssembler: AnyObject {
-	func assemble() -> UIViewController
-}
-
-final class DevExamLoginAuthSceneAssembler: IAssembler {
+enum Assembler {
 	/// Проводит сборку DevExamAuth сцены приложения.
 	/// - Returns: DevExamAuthorization контроллер.
-	func assemble() -> UIViewController {
+	static func assembleDevExamLoginAuthScene(withCoordinator coordinator: IAuthorizationCoordinator) -> UIViewController {
 
 		return UIViewController()
 	}
-}
 
-final class DevExamAssembler: IAssembler {
 	/// Проводит сборку DevExam  сцены приложения.
 	/// - Returns: DevExam контроллер.
-	func assemble() -> UIViewController {
+	static func assembleDevExamScene(withCoordinator coordinator: IDevExamCoordinator) -> UIViewController {
 		let presenter = DevExamPresenter()
 		let worker = DevExamWorker()
-		let interactor = DevExamInteractor(presenter: presenter, worker: worker)
+		let interactor = DevExamInteractor(presenter: presenter, worker: worker, coordinator: coordinator)
 		let viewController = DevExamViewController(interactor: interactor)
 		presenter.viewController = viewController
 
 		return viewController
 	}
-}
 
-final class DevExamDetailAssembler: IAssembler {
 	/// Проводит сборку DevExamDetail  сцены приложения.
 	/// - Returns: DevExamDetail контроллер.
-	func assemble() -> UIViewController {
+	static func assembleDevExamDetailScene() -> UIViewController {
 		let presenter = DevExamDetailPresenter()
 		let interactor = DevExamDetailInteractor(presenter: presenter)
 		let viewController = DevExamDetailViewController(interactor: interactor)
