@@ -136,7 +136,7 @@ final class DevExamViewController: UITabBarController {
 // MARK: - UITableViewDelegate Implementation
 extension DevExamViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//
+		interactor.rowDidSelect(atIndexPath: indexPath)
 	}
 }
 
