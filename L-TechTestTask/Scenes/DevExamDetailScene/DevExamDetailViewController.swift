@@ -18,18 +18,12 @@ final class DevExamDetailViewController: UIViewController {
 	private let interactor: IDevExamDetailInteractor
 
 	// MARK: - UI Elements
-	private lazy var scrollView: UIScrollView = makeRootScrollView()
-	private lazy var stackView: UIStackView = makeStackView()
-	private lazy var dateLabel = makeDateLabel()
-	private lazy var titleLabel = makeTitleLabel()
-	private lazy var imageView = makeImageView()
-	private lazy var textView = makeTextView()
-
-	// MARK: - Computed Properties
-	private var scrollViewContentSize: CGSize {
-//		CGSize(width: view.frame.width, height: view.frame.height + 400)
-		stackView.frame.size
-	}
+	private lazy var scrollView: UIScrollView = makeScrollView()
+	private lazy var contentView = UIView()
+	private lazy var dateLabel: UILabel = makeDateLabel()
+	private lazy var titleLabel: UILabel = makeTitleLabel()
+	private lazy var imageView: UIImageView = makeImageView()
+	private lazy var textLabel: UILabel = makeTextLabel()
 
 	// MARK: - Initializers
 	init(interactor: IDevExamDetailInteractor) {
@@ -48,22 +42,13 @@ final class DevExamDetailViewController: UIViewController {
 	}
 
 	// MARK: - Private Methods
-	private func makeRootScrollView() -> UIScrollView {
+	private func makeScrollView() -> UIScrollView {
 		let scrollView = UIScrollView(frame: view.bounds)
-		scrollView.contentSize = scrollViewContentSize
-		scrollView.backgroundColor = .systemOrange
+		scrollView.backgroundColor = .white
 
 		return scrollView
 	}
-
-	private func makeStackView() -> UIStackView {
-		let stackView = UIStackView()
-		stackView.axis = .vertical
-		stackView.backgroundColor = .cyan
-
-		return stackView
-	}
-
+	
 	private func makeDateLabel() -> UILabel {
 		let label = UILabel()
 		label.textColor = .lightGray
@@ -88,27 +73,53 @@ final class DevExamDetailViewController: UIViewController {
 		return imageView
 	}
 
-	private func makeTextView() -> UITextView {
-		let textView = UITextView()
+	private func makeTextLabel() -> UILabel {
+		let textLabel = UILabel()
+		textLabel.numberOfLines = 0
+		textLabel.textAlignment = .left
 
-		return textView
+		return textLabel
 	}
 
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
 		view.addSubview(scrollView)
-		scrollView.addSubview(stackView)
-		stackView.addArrangedSubview(dateLabel)
-		stackView.addArrangedSubview(titleLabel)
-		stackView.addArrangedSubview(imageView)
-		stackView.addArrangedSubview(textView)
+		scrollView.addSubview(contentView)
+		contentView.addSubview(dateLabel)
+		contentView.addSubview(titleLabel)
+		contentView.addSubview(imageView)
+		contentView.addSubview(textLabel)
 
 		scrollView.snp.makeConstraints { make in
 			make.edges.equalToSuperview()
 		}
 
-		stackView.snp.makeConstraints { make in
+		contentView.snp.makeConstraints { make in
 			make.edges.equalToSuperview()
+			make.width.equalTo(view.snp.width)
+		}
+
+		dateLabel.snp.makeConstraints { make in
+			make.top.left.right.equalToSuperview().inset(16)
+			make.height.equalTo(18)
+		}
+
+		titleLabel.snp.makeConstraints { make in
+			make.top.equalTo(dateLabel.snp.bottom).offset(16)
+			make.left.right.equalToSuperview().inset(16)
+			make.height.equalTo(48)
+		}
+
+		imageView.snp.makeConstraints { make in
+			make.top.equalTo(titleLabel.snp.bottom).offset(16)
+			make.left.right.equalToSuperview().inset(16)
+			make.height.equalTo(226)
+		}
+
+		textLabel.snp.makeConstraints { make in
+			make.top.equalTo(imageView.snp.bottom).offset(16)
+			make.left.right.equalToSuperview().inset(16)
+			make.bottom.equalTo(contentView)
 		}
 	}
 }
