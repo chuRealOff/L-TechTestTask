@@ -14,7 +14,7 @@ protocol IDevExamInteractor: AnyObject {
 
 	/// Отрабатывает нажатие на ячейку контроллера.
 	/// - Parameter indexPath: индекс ячейки.
-	func rowDidSelect(atIndexPath indexPath: IndexPath)
+	func rowDidSelect(with data: [DTO.News], at indexPath: IndexPath)
 }
 
 final class DevExamInteractor {
@@ -48,7 +48,7 @@ extension DevExamInteractor: IDevExamInteractor {
 		}
 	}
 
-	func rowDidSelect(atIndexPath indexPath: IndexPath) {
-		coordinator.showDevExamDetailSceneFlow()
+	func rowDidSelect(with data: [DTO.News], at indexPath: IndexPath) {
+		coordinator.showDevExamDetailSceneFlow(with: data, at: indexPath)
 	}
 }

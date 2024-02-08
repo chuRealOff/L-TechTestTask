@@ -9,7 +9,7 @@ import UIKit
 /// Набор методов для реализации координатором основного экрана..
 protocol IDevExamCoordinator: ICoordinator {
 	func showDevExamSceneFlow()
-	func showDevExamDetailSceneFlow()
+	func showDevExamDetailSceneFlow(with newsData: [DTO.News], at indexPath: IndexPath)
 }
 
 /// Координатор основного экрана.
@@ -31,8 +31,8 @@ final class DevExamCoordinator: IDevExamCoordinator {
 		navigationController.pushViewController(devExamController, animated: true)
 	}
 
-	func showDevExamDetailSceneFlow() {
-		let devExamDetailController = Assembler.assembleDevExamDetailScene()
+	func showDevExamDetailSceneFlow(with newsData: [DTO.News], at indexPath: IndexPath) {
+		let devExamDetailController = Assembler.assembleDevExamDetailScene(with: newsData, at: indexPath)
 		navigationController.pushViewController(devExamDetailController, animated: true)
 	}
 }
