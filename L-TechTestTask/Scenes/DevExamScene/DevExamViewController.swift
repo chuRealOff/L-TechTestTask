@@ -48,11 +48,6 @@ final class DevExamViewController: UITabBarController {
 		makeRefreshPageNavigationItem()
 	}
 
-	@objc
-	func refreshPage() {
-
-	}
-
 	// MARK: - Internal Methods
 	func showErrorAlert(_ alertController: UIAlertController) {
 		self.present(alertController, animated: true)
@@ -110,6 +105,11 @@ final class DevExamViewController: UITabBarController {
 		)
 	}
 
+	@objc
+	private func refreshPage() {
+
+	}
+
 	/// Настраивает размещение всех дочерних view элементов на экране.
 	private func setupUI() {
 		navigationController?.hidesBarsOnSwipe = true
@@ -136,7 +136,7 @@ final class DevExamViewController: UITabBarController {
 // MARK: - UITableViewDelegate Implementation
 extension DevExamViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		interactor.rowDidSelect(atIndexPath: indexPath)
+		interactor.rowDidSelect(with: newsData, at: indexPath)
 	}
 }
 
