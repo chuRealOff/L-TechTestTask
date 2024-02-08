@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 protocol IDevExamDetailViewController: AnyObject {
-
+	func render(with data: DTO.News)
 }
 
 final class DevExamDetailViewController: UIViewController {
@@ -39,6 +39,7 @@ final class DevExamDetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		interactor.viewIsReady()
 	}
 
 	// MARK: - Private Methods
@@ -48,7 +49,7 @@ final class DevExamDetailViewController: UIViewController {
 
 		return scrollView
 	}
-	
+
 	private func makeDateLabel() -> UILabel {
 		let label = UILabel()
 		label.textColor = .lightGray
@@ -79,6 +80,22 @@ final class DevExamDetailViewController: UIViewController {
 		textLabel.textAlignment = .left
 
 		return textLabel
+	}
+
+	/// Добавляет кнопку 'like' в навигационную панель.
+	private func makeLikeBarButtonNavigationItem() {
+		navigationController?.navigationBar.tintColor = .black
+		navigationItem.rightBarButtonItem = UIBarButtonItem(
+			image: UIImage(systemName: "suit.heart"),
+			style: .done,
+			target: self,
+			action: #selector(likeButtonTapped)
+		)
+	}
+
+	@objc
+	private func likeButtonTapped() {
+
 	}
 
 	/// Настраивает размещение всех дочерних view элементов на экране.
@@ -126,5 +143,10 @@ final class DevExamDetailViewController: UIViewController {
 
 // MARK: - IDevExamDetailViewController Implementation
 extension DevExamDetailViewController: IDevExamDetailViewController {
-
+	func render(with data: DTO.News) {
+		dateLabel.text = data.date
+		titleLabel.text = data.title
+		imageView.image = data.image
+		textLabel.text = data.text
+	}
 }

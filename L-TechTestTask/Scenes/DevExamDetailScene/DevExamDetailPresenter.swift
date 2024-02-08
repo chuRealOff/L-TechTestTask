@@ -8,10 +8,17 @@
 import Foundation
 
 protocol IDevExamDetailPresenter: AnyObject {
-
+	func present(with data: DTO.News)
 }
 
-final class DevExamDetailPresenter: IDevExamDetailPresenter {
+final class DevExamDetailPresenter {
 	// MARK: - Dependencies
 	weak var viewController: IDevExamDetailViewController?
+}
+
+// MARK: - IDevExamDetailPresenter Implementation
+extension DevExamDetailPresenter: IDevExamDetailPresenter {
+	func present(with data: DTO.News) {
+		viewController?.render(with: data)
+	}
 }
