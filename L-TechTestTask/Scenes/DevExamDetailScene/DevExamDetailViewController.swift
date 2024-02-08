@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 protocol IDevExamDetailViewController: AnyObject {
+	/// Производит наполнение элементов интерфейса контроллера данными.
+	/// - Parameter data: Данные для отображения на экране контроллера.
 	func render(with data: DTO.News)
 }
 

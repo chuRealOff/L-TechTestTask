@@ -8,6 +8,7 @@
 import Foundation
 
 protocol IDevExamDetailPresenter: AnyObject {
+	/// Производит передачу данных в контроллер для их последующего отображения.
 	func present(with data: DTO.News)
 }
 
