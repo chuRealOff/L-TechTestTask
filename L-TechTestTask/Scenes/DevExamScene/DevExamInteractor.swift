@@ -39,10 +39,8 @@ extension DevExamInteractor: IDevExamInteractor {
 			case let .success((news, imageViews)):
 				self?.presenter.present(with: news, and: imageViews)
 			case .failure(let error):
-				if let alertController = self?.worker.createAlertController() {
 					DispatchQueue.main.async {
-						self?.presenter.presentErrorAlert(alertController, withMessage: error.rawValue)
-					}
+						self?.coordinator.showAlertController(with: error.rawValue)
 				}
 			}
 		}

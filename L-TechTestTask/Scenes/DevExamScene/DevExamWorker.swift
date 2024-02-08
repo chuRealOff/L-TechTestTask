@@ -16,10 +16,6 @@ protocol IDevExamWorker: AnyObject {
 		from endPoint: String,
 		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
 	)
-
-	/// Создаёт UIAlertController, ответственный за обработку ошибок сетевых запросов.
-	/// - Parameter message: текст сообщения об ошибке.
-	func createAlertController() -> UIAlertController
 }
 
 final class DevExamWorker: IDevExamWorker {
@@ -99,15 +95,5 @@ final class DevExamWorker: IDevExamWorker {
 		dispatchGroup.notify(queue: .main) {
 			completion(imageViews)
 		}
-	}
-
-	func createAlertController() -> UIAlertController {
-		let alertController = UIAlertController(
-			title: "",
-			message: "",
-			preferredStyle: .alert
-		)
-
-		return alertController
 	}
 }

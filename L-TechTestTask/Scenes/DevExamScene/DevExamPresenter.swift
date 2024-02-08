@@ -11,21 +11,11 @@ protocol IDevExamPresenter: AnyObject {
 	/// Сообщает презентеру данные, необходимые для передачи контроллеру..
 	/// - Parameter newsData: Массив данных для отображения на экране контроллера.
 	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView])
-
-	/// Подготавливает UIAlertController для последующего отображения на главном экране контроллера.
-	func presentErrorAlert(_ alertController: UIAlertController, withMessage: String)
 }
 
 final class DevExamPresenter: IDevExamPresenter {
 	// MARK: - Dependencies
 	weak var viewController: IDevExamViewController?
-
-	// MARK: - Internal Methods
-	func presentErrorAlert(_ alertController: UIAlertController, withMessage message: String) {
-		alertController.title = "An error has occured"
-		alertController.message = message
-		viewController?.showAlert(alertController)
-	}
 
 	// MARK: - IDevExamPresenter Implementation
 	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView]) {

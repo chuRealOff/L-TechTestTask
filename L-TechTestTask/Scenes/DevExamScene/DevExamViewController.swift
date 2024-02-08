@@ -12,9 +12,6 @@ protocol IDevExamViewController: AnyObject {
 	/// Запись в массив данных  контроллера и отображение содержимого массива на экране.
 	/// - Parameter news: массив данных, необходимых контроллеру для отображения.
 	func render(with news: [DTO.News])
-
-	/// Отображает сообщение об ошибке при работе с сетью.
-	func showAlert(_ alertController: UIAlertController)
 }
 
 final class DevExamViewController: UITabBarController {
@@ -46,11 +43,6 @@ final class DevExamViewController: UITabBarController {
 		title = "Лента новостей"
 		setupUI()
 		makeRefreshPageNavigationItem()
-	}
-
-	// MARK: - Internal Methods
-	func showErrorAlert(_ alertController: UIAlertController) {
-		self.present(alertController, animated: true)
 	}
 
 	// MARK: - Private Methods
@@ -164,9 +156,5 @@ extension DevExamViewController: IDevExamViewController {
 	func render(with news: [DTO.News]) {
 		newsData = news
 		tableView.reloadData()
-	}
-
-	func showAlert(_ alertController: UIAlertController) {
-		self.present(alertController, animated: true)
 	}
 }
