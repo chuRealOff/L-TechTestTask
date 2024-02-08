@@ -29,9 +29,9 @@ enum Assembler {
 
 	/// Проводит сборку DevExamDetail  сцены приложения.
 	/// - Returns: DevExamDetail контроллер.
-	static func assembleDevExamDetailScene() -> UIViewController {
+	static func assembleDevExamDetailScene(with data: [DTO.News], at indexPath: IndexPath) -> UIViewController {
 		let presenter = DevExamDetailPresenter()
-		let interactor = DevExamDetailInteractor(presenter: presenter)
+		let interactor = DevExamDetailInteractor(presenter: presenter, newsData: data, indexPath: indexPath)
 		let viewController = DevExamDetailViewController(interactor: interactor)
 		presenter.viewController = viewController
 
