@@ -8,8 +8,17 @@ import UIKit
 
 /// Набор методов для реализации координатором основного экрана..
 protocol IDevExamCoordinator: ICoordinator {
+	/// Проводит сборку  и отображение основого экрана приложения.
 	func showDevExamSceneFlow()
+
+	/// Проводит сборку и отображение экрана с детальной информацией.
+	/// - Parameters:
+	///   - newsData: Данные для отображения на экране.
+	///   - indexPath: Индекс выбранного для отображения события.
 	func showDevExamDetailSceneFlow(with newsData: [DTO.News], at indexPath: IndexPath)
+
+	/// Создаёт и отображает на экране UIAlertController, ответственный за обработку ошибок сетевых запросов.
+	/// - Parameter message: текст сообщения об ошибке.
 	func showAlertController(with message: String)
 }
 
@@ -37,8 +46,6 @@ final class DevExamCoordinator: IDevExamCoordinator {
 		navigationController.pushViewController(devExamDetailController, animated: true)
 	}
 
-	/// Создаёт и отображает на экране UIAlertController, ответственный за обработку ошибок сетевых запросов.
-	/// - Parameter message: текст сообщения об ошибке.
 	func showAlertController(with message: String) {
 		let alertController = UIAlertController(
 			title: "An error hac occured!",

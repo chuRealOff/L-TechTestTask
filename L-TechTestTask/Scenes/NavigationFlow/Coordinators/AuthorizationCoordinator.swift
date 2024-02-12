@@ -9,6 +9,7 @@ import UIKit
 
 /// Набор методов для реализации координатором экрана авторизации.
 protocol IAuthorizationCoordinator: ICoordinator {
+	/// Проводит сборку  и отображение  экрана авторизации приложения.
 	func showLoginSceneFlow()
 }
 

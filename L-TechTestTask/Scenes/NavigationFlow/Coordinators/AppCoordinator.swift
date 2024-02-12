@@ -9,7 +9,10 @@ import UIKit
 
 /// Набор методов для реализации главным координатором.
 protocol IAppCoordinator: ICoordinator {
+	/// Запуск сцены авторизации.
 	func showAuthSceneFlow()
+
+	/// Запуск сцены с детальной информацией.
 	func showDevExamSceneFlow()
 }
 
@@ -26,7 +29,7 @@ final class AppCoordinator: IAppCoordinator {
 	}
 
 	func start() {
-		showDevExamSceneFlow() // изменить на логин сцену
+		showDevExamSceneFlow() 
 	}
 
 	func showAuthSceneFlow() {

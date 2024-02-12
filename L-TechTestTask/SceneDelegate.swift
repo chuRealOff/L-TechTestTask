@@ -17,16 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		options connectionOptions: UIScene.ConnectionOptions
 	) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
-		let window = UIWindow(windowScene: windowScene)
-
+		window = UIWindow(windowScene: windowScene)
 		let navigationController = UINavigationController()
 		let appCoordinator = AppCoordinator(navigationController: navigationController)
-
-		window.rootViewController = navigationController
-		window.makeKeyAndVisible()
-
+		window?.rootViewController = navigationController
+		window?.makeKeyAndVisible()
 		appCoordinator.start()
-
-		self.window = window
 	}
 }

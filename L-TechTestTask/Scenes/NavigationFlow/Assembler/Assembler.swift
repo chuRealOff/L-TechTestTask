@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Сборщик сцен приложения.
 enum Assembler {
 	/// Проводит сборку DevExamAuth сцены приложения.
 	/// - Returns: DevExamAuthorization контроллер.
