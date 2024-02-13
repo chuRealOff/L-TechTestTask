@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  DevExamCoordinator.swift
 //  L-TechTestTask
 //
 //  Created by CHURILOV DMITRIY on 12.12.2023.

@@ -22,6 +22,10 @@
 		ABA0981B2B6A618100FABC55 /* DevExamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */; };
 		ABA0981D2B6A623200FABC55 /* DevExamDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */; };
 		ABA0981F2B6A628700FABC55 /* DevExamDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981E2B6A628700FABC55 /* DevExamDetailPresenter.swift */; };
+		ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */; };
+		ABC6EA392B7A3B7E00FA456F /* DevExamViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA382B7A3B7E00FA456F /* DevExamViewControllerTests.swift */; };
+		ABC6EA3B2B7A3BE400FA456F /* DevExamPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */; };
+		ABC6EA3D2B7A3C0000FA456F /* DevExamWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA3C2B7A3C0000FA456F /* DevExamWorkerTests.swift */; };
 		ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */; };
 		ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */; };
 		ABCF8D922B24FAB600FB8DB4 /* DevExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF8D912B24FAB600FB8DB4 /* DevExamViewController.swift */; };
@@ -33,6 +37,16 @@
 		ABF206F32B2664E000C75164 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F22B2664E000C75164 /* Constants.swift */; };
 		ABF206F62B27274800C75164 /* DevExamWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF206F52B27274800C75164 /* DevExamWorker.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABC6EA322B7A357E00FA456F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABCF8D822B24FAB600FB8DB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABCF8D892B24FAB600FB8DB4;
+			remoteInfo = "L-TechTestTask";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
@@ -47,6 +61,11 @@
 		ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailViewController.swift; sourceTree = "<group>"; };
 		ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailInteractor.swift; sourceTree = "<group>"; };
 		ABA0981E2B6A628700FABC55 /* DevExamDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailPresenter.swift; sourceTree = "<group>"; };
+		ABC6EA2E2B7A357E00FA456F /* L-TechTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "L-TechTestTaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractorTests.swift; sourceTree = "<group>"; };
+		ABC6EA382B7A3B7E00FA456F /* DevExamViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamViewControllerTests.swift; sourceTree = "<group>"; };
+		ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenterTests.swift; sourceTree = "<group>"; };
+		ABC6EA3C2B7A3C0000FA456F /* DevExamWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamWorkerTests.swift; sourceTree = "<group>"; };
 		ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L-TechTestTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF8D8D2B24FAB600FB8DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCF8D8F2B24FAB600FB8DB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +81,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ABC6EA2B2B7A357E00FA456F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABCF8D872B24FAB600FB8DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2E20722B7B420D0058697F /* DevExamSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABC6EA382B7A3B7E00FA456F /* DevExamViewControllerTests.swift */,
+				ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */,
+				ABC6EA3C2B7A3C0000FA456F /* DevExamWorkerTests.swift */,
+				ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */,
+				ABC6EA372B7A392D00FA456F /* TestDoubles */,
+			);
+			path = DevExamSceneTests;
+			sourceTree = "<group>";
+		};
+		AB2E20732B7B422A0058697F /* DevExamDetailSceneTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DevExamDetailSceneTests;
+			sourceTree = "<group>";
+		};
 		AB42C5022B2A494200CE98CD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,10 +212,27 @@
 			path = DevExamDetailScene;
 			sourceTree = "<group>";
 		};
+		ABC6EA2F2B7A357E00FA456F /* L-TechTestTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB2E20732B7B422A0058697F /* DevExamDetailSceneTests */,
+				AB2E20722B7B420D0058697F /* DevExamSceneTests */,
+			);
+			path = "L-TechTestTaskTests";
+			sourceTree = "<group>";
+		};
+		ABC6EA372B7A392D00FA456F /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
 		ABCF8D812B24FAB600FB8DB4 = {
 			isa = PBXGroup;
 			children = (
 				ABCF8D8C2B24FAB600FB8DB4 /* L-TechTestTask */,
+				ABC6EA2F2B7A357E00FA456F /* L-TechTestTaskTests */,
 				ABCF8D8B2B24FAB600FB8DB4 /* Products */,
 				AB949BEA2B2DB66200FA7E8D /* Frameworks */,
 			);
@@ -180,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				ABCF8D8A2B24FAB600FB8DB4 /* L-TechTestTask.app */,
+				ABC6EA2E2B7A357E00FA456F /* L-TechTestTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +299,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ABC6EA2D2B7A357E00FA456F /* L-TechTestTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABC6EA362B7A357E00FA456F /* Build configuration list for PBXNativeTarget "L-TechTestTaskTests" */;
+			buildPhases = (
+				ABC6EA2A2B7A357E00FA456F /* Sources */,
+				ABC6EA2B2B7A357E00FA456F /* Frameworks */,
+				ABC6EA2C2B7A357E00FA456F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABC6EA332B7A357E00FA456F /* PBXTargetDependency */,
+			);
+			name = "L-TechTestTaskTests";
+			productName = "L-TechTestTaskTests";
+			productReference = ABC6EA2E2B7A357E00FA456F /* L-TechTestTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ABCF8D892B24FAB600FB8DB4 /* L-TechTestTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABCF8D9E2B24FAB800FB8DB4 /* Build configuration list for PBXNativeTarget "L-TechTestTask" */;
@@ -269,6 +350,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					ABC6EA2D2B7A357E00FA456F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = ABCF8D892B24FAB600FB8DB4;
+					};
 					ABCF8D892B24FAB600FB8DB4 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -292,11 +377,19 @@
 			projectRoot = "";
 			targets = (
 				ABCF8D892B24FAB600FB8DB4 /* L-TechTestTask */,
+				ABC6EA2D2B7A357E00FA456F /* L-TechTestTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ABC6EA2C2B7A357E00FA456F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABCF8D882B24FAB600FB8DB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,6 +424,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ABC6EA2A2B7A357E00FA456F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC6EA3B2B7A3BE400FA456F /* DevExamPresenterTests.swift in Sources */,
+				ABC6EA392B7A3B7E00FA456F /* DevExamViewControllerTests.swift in Sources */,
+				ABC6EA3D2B7A3C0000FA456F /* DevExamWorkerTests.swift in Sources */,
+				ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABCF8D862B24FAB600FB8DB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +464,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		ABC6EA332B7A357E00FA456F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABCF8D892B24FAB600FB8DB4 /* L-TechTestTask */;
+			targetProxy = ABC6EA322B7A357E00FA456F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ABCF8D982B24FAB800FB8DB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -372,6 +484,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ABC6EA342B7A357E00FA456F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595NK55QRF;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.L-TechTestTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/L-TechTestTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/L-TechTestTask";
+			};
+			name = Debug;
+		};
+		ABC6EA352B7A357E00FA456F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 595NK55QRF;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.L-TechTestTaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/L-TechTestTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/L-TechTestTask";
+			};
+			name = Release;
+		};
 		ABCF8D9C2B24FAB800FB8DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -552,6 +710,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ABC6EA362B7A357E00FA456F /* Build configuration list for PBXNativeTarget "L-TechTestTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABC6EA342B7A357E00FA456F /* Debug */,
+				ABC6EA352B7A357E00FA456F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ABCF8D852B24FAB600FB8DB4 /* Build configuration list for PBXProject "L-TechTestTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

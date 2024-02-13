@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  AppCoordinator.swift
 //  L-TechTestTask
 //
 //  Created by CHURILOV DMITRIY on 13.12.2023.
@@ -29,7 +29,7 @@ final class AppCoordinator: IAppCoordinator {
 	}
 
 	func start() {
-		showDevExamSceneFlow() 
+		showDevExamSceneFlow()
 	}
 
 	func showAuthSceneFlow() {

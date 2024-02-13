@@ -1,5 +1,5 @@
 //
-//  DevExamAssembler.swift
+//  Assembler.swift
 //  L-TechTestTask
 //
 //  Created by CHURILOV DMITRIY on 13.12.2023.
@@ -18,7 +18,7 @@ enum Assembler {
 
 	/// Проводит сборку DevExam  сцены приложения.
 	/// - Returns: DevExam контроллер.
-	static func assembleDevExamScene(withCoordinator coordinator: IDevExamCoordinator) -> UIViewController {
+	static func assembleDevExamScene(withCoordinator coordinator: IDevExamCoordinator) -> DevExamViewController {
 		let presenter = DevExamPresenter()
 		let worker = DevExamWorker()
 		let interactor = DevExamInteractor(presenter: presenter, worker: worker, coordinator: coordinator)
@@ -30,7 +30,7 @@ enum Assembler {
 
 	/// Проводит сборку DevExamDetail  сцены приложения.
 	/// - Returns: DevExamDetail контроллер.
-	static func assembleDevExamDetailScene(with data: [DTO.News], at indexPath: IndexPath) -> UIViewController {
+	static func assembleDevExamDetailScene(with data: [DTO.News], at indexPath: IndexPath) -> DevExamDetailViewController {
 		let presenter = DevExamDetailPresenter()
 		let interactor = DevExamDetailInteractor(presenter: presenter, newsData: data, indexPath: indexPath)
 		let viewController = DevExamDetailViewController(interactor: interactor)
