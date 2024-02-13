@@ -16,6 +16,7 @@
 		AB42C50A2B2A4B1D00CE98CD /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */; };
 		AB42C5112B2B151000CE98CD /* DevExamTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */; };
 		AB5121FC2B7B738200226E83 /* DevExamWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */; };
+		AB5121FE2B7B76AA00226E83 /* DevExamPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */; };
 		AB81EC9F2B41911700320BA6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81EC9E2B41911700320BA6 /* FilterViewController.swift */; };
 		AB949BEF2B2DB6B900FA7E8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BEE2B2DB6B900FA7E8D /* SnapKit */; };
 		AB949BF12B2DB6B900FA7E8D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BF02B2DB6B900FA7E8D /* SnapKit-Dynamic */; };
@@ -59,6 +60,7 @@
 		AB42C5092B2A4B1D00CE98CD /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
 		AB42C5102B2B151000CE98CD /* DevExamTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamTableViewCellModel.swift; sourceTree = "<group>"; };
 		AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamWorkerSpy.swift; sourceTree = "<group>"; };
+		AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenterSpy.swift; sourceTree = "<group>"; };
 		AB81EC9E2B41911700320BA6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailViewController.swift; sourceTree = "<group>"; };
 		ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailInteractor.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */,
+				AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */,
 			);
 			path = TestDoubles;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				ABC6EA392B7A3B7E00FA456F /* DevExamViewControllerTests.swift in Sources */,
 				ABC6EA3D2B7A3C0000FA456F /* DevExamWorkerTests.swift in Sources */,
 				AB5121FC2B7B738200226E83 /* DevExamWorkerSpy.swift in Sources */,
+				AB5121FE2B7B76AA00226E83 /* DevExamPresenterSpy.swift in Sources */,
 				ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
