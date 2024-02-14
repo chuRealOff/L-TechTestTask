@@ -17,7 +17,12 @@ extension Mockable {
 	var bundle: Bundle {
 		return Bundle(for: type(of: self))
 	}
-
+	
+	/// Проводит загрузку данных из локального хранилища.
+	/// - Parameters:
+	///   - fileName: Имя файла.
+	///   - type: Тип файла.
+	/// - Returns: Массив универсальных данных.
 	func loadData<T: Decodable>(fileName: String, type: T.Type) -> [T] {
 		guard let path = bundle.url(forResource: fileName, withExtension: "json") else {
 			fatalError("Failed to load JSON file.")
