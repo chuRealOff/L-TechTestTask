@@ -14,9 +14,7 @@ final class DevExamPresenterSpy: IDevExamPresenter {
 	private(set) var presentWasCalled = false
 
 	// MARK: Internal Methods
-	func present(with newsData: [L_TechTestTask.DTO.NewsRawModel], and pictures: [UIImageView]) {
+	func present(with newsData: [DTO.NewsRawModel], and pictures: [UIImageView]) {
 		presentWasCalled = true
 	}
-	
-
 }

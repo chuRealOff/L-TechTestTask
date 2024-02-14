@@ -9,17 +9,24 @@ import Foundation
 import UIKit
 @testable import L_TechTestTask
 
-final class DevExamWorkerSpy: IDevExamWorker {
+final class DevExamWorkerSpy: IDevExamWorker, Mockable {
 	// MARK: Internal Properties
 	private(set) var fetchNetworkDataWasCalled = false
-	
+
 	// MARK: Internal Methods
 	func fetchNetworkData(
 		from endPoint: String,
-		completion: @escaping ((Result<([L_TechTestTask.DTO.NewsRawModel], [UIImageView]), L_TechTestTask.NetworkError>) -> Void)
+		completion: @escaping ((Result<([DTO.NewsRawModel], [UIImageView]), NetworkError>) -> Void)
 	) {
+		let newsData = loadData(fileName: "newsMockData", type: DTO.NewsRawModel.self)
+		let forestImage = UIImage(named: "forest")
+		let forestImageView = UIImageView.init(image: forestImage)
+		let fieldImage = UIImage(named: "field")
+		let fieldImageView = UIImageView.init(image: fieldImage)
+		let imageViews = [forestImageView, fieldImageView]
+
+		completion(.success((newsData, imageViews)))
+
 		fetchNetworkDataWasCalled = true
 	}
-	
-
 }

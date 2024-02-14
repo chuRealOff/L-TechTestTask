@@ -38,10 +38,14 @@ opt_in_rules:
   - vertical_parameter_alignment_on_call
   - vertical_whitespace_closing_braces
 
+# список правил, которые необходимо выключить
+disabled_rules:
+  - trailing_whitespace
 
 # путь к исходникам для проверки кода
-included:
+ included:
   - L-TechTestTask
+  - L-TechTestTaskTests
 
 # подкаталоги, в которых линтер не будет делать проверку кода
 excluded:

@@ -7,8 +7,8 @@
 
 import UIKit
 
-/// Делегат, оповещающий о завершении сцены.
-protocol ICoordinatorFinishDelegate where Self: ICoordinator {
+/// Делегат, оповещающий о завершении
+protocol ICoordinatorFinishDelegate: AnyObject {
 	/// Уведомляет о заверешнии работы сцены.
 	/// - Parameter coordinator: Координатор завершенной сцены.
 	func didFinish(_ coordinator: ICoordinator )

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0493702B7C9A70007DA83F /* newsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = AB04936F2B7C9A70007DA83F /* newsMockData.json */; };
+		AB0493722B7CA19C007DA83F /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0493712B7CA19C007DA83F /* Mockable.swift */; };
 		AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */; };
 		AB3E7F452B66654C0046EF6F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E7F442B66654C0046EF6F /* NetworkError.swift */; };
 		AB42C4FF2B29AAE500CE98CD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* Assembler.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB04936F2B7C9A70007DA83F /* newsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = newsMockData.json; sourceTree = "<group>"; };
+		AB0493712B7CA19C007DA83F /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
 		AB3E7F442B66654C0046EF6F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AB42C4FE2B29AAE500CE98CD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */,
 				ABC6EA3C2B7A3C0000FA456F /* DevExamWorkerTests.swift */,
 				ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */,
+				AB04936F2B7C9A70007DA83F /* newsMockData.json */,
+				AB0493712B7CA19C007DA83F /* Mockable.swift */,
 				ABC6EA372B7A392D00FA456F /* TestDoubles */,
 			);
 			path = DevExamSceneTests;
@@ -401,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0493702B7C9A70007DA83F /* newsMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +454,7 @@
 				ABC6EA3D2B7A3C0000FA456F /* DevExamWorkerTests.swift in Sources */,
 				AB5121FC2B7B738200226E83 /* DevExamWorkerSpy.swift in Sources */,
 				AB5121FE2B7B76AA00226E83 /* DevExamPresenterSpy.swift in Sources */,
+				AB0493722B7CA19C007DA83F /* Mockable.swift in Sources */,
 				ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
