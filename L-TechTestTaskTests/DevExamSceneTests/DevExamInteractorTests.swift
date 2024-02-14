@@ -12,7 +12,7 @@ final class DevExamInteractorTests: XCTestCase {
 	let presenter = DevExamPresenterSpy()
 	let worker = DevExamWorkerSpy()
 
-	func test_viewIsReady_workedOut() {
+	func test_viewIsReady_methodWorkedOutProperly() {
 		let sut = makeSut()
 
 		sut.viewIsReady()
@@ -23,9 +23,9 @@ final class DevExamInteractorTests: XCTestCase {
 }
 
 private extension DevExamInteractorTests {
-	/// Создание DevExamInteractor, подлежащего тестированию.
+	/// Создает DevExamInteractor, подлежащего тестированию.
 	/// - Returns: DevExamInteractor.
-	func makeSut() -> IDevExamInteractor {
+	func makeSut() -> DevExamInteractor {
 		let coordinator = DevExamCoordinator(navigationController: UINavigationController())
 		let interactor = DevExamInteractor(presenter: presenter, worker: worker, coordinator: coordinator)
 

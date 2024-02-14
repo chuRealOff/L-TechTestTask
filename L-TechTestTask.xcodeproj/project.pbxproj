@@ -10,6 +10,8 @@
 		AB0493702B7C9A70007DA83F /* newsMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = AB04936F2B7C9A70007DA83F /* newsMockData.json */; };
 		AB0493722B7CA19C007DA83F /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0493712B7CA19C007DA83F /* Mockable.swift */; };
 		AB12DE2E2B28F621007844CD /* DevExamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */; };
+		AB132B9E2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB132B9D2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift */; };
+		AB132BA02B7CD672002D7740 /* MockDataCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB132B9F2B7CD672002D7740 /* MockDataCreator.swift */; };
 		AB3E7F452B66654C0046EF6F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E7F442B66654C0046EF6F /* NetworkError.swift */; };
 		AB42C4FF2B29AAE500CE98CD /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C4FE2B29AAE500CE98CD /* Assembler.swift */; };
 		AB42C5012B2A493D00CE98CD /* ICoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C5002B2A493D00CE98CD /* ICoordinatorProtocol.swift */; };
@@ -56,6 +58,8 @@
 		AB04936F2B7C9A70007DA83F /* newsMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = newsMockData.json; sourceTree = "<group>"; };
 		AB0493712B7CA19C007DA83F /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		AB12DE2D2B28F621007844CD /* DevExamCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamCoordinator.swift; sourceTree = "<group>"; };
+		AB132B9D2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamViewControllerSpy.swift; sourceTree = "<group>"; };
+		AB132B9F2B7CD672002D7740 /* MockDataCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataCreator.swift; sourceTree = "<group>"; };
 		AB3E7F442B66654C0046EF6F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		AB42C4FE2B29AAE500CE98CD /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		AB42C5002B2A493D00CE98CD /* ICoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */,
 				AB04936F2B7C9A70007DA83F /* newsMockData.json */,
 				AB0493712B7CA19C007DA83F /* Mockable.swift */,
+				AB132B9F2B7CD672002D7740 /* MockDataCreator.swift */,
 				ABC6EA372B7A392D00FA456F /* TestDoubles */,
 			);
 			path = DevExamSceneTests;
@@ -244,6 +249,7 @@
 			children = (
 				AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */,
 				AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */,
+				AB132B9D2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift */,
 			);
 			path = TestDoubles;
 			sourceTree = "<group>";
@@ -455,6 +461,8 @@
 				AB5121FC2B7B738200226E83 /* DevExamWorkerSpy.swift in Sources */,
 				AB5121FE2B7B76AA00226E83 /* DevExamPresenterSpy.swift in Sources */,
 				AB0493722B7CA19C007DA83F /* Mockable.swift in Sources */,
+				AB132BA02B7CD672002D7740 /* MockDataCreator.swift in Sources */,
+				AB132B9E2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift in Sources */,
 				ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

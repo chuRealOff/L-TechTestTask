@@ -6,3 +6,14 @@
 //
 
 import Foundation
+@testable import L_TechTestTask
+
+final class DevExamViewControllerSpy: IDevExamViewController {
+	// MARK: Internal Properties
+	private(set) var renderWasCalled = false
+
+	// MARK: Internal Methods
+	func render(with news: [DTO.News]) {
+		renderWasCalled = true
+	}
+}
