@@ -17,7 +17,7 @@ extension Mockable {
 	var bundle: Bundle {
 		return Bundle(for: type(of: self))
 	}
-	
+
 	/// Проводит загрузку данных из локального хранилища.
 	/// - Parameters:
 	///   - fileName: Имя файла.

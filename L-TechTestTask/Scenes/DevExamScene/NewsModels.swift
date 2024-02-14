@@ -8,9 +8,9 @@
 import UIKit
 
 /// Data Transfer Object. Контейнер для моделей данных.
-enum DTO {
+public enum DTO {
 	/// Модель данных для декодирования.
-	struct NewsRawModel: Decodable {
+	public struct NewsRawModel: Decodable {
 		let id: String
 		let title: String
 		let text: String
