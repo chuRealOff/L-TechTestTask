@@ -25,8 +25,9 @@ final class DevExamWorkerSpy: IDevExamWorker, Mockable {
 		let fieldImageView = UIImageView.init(image: fieldImage)
 		let imageViews = [forestImageView, fieldImageView]
 
-		completion(.success((newsData, imageViews)))
-
 		fetchNetworkDataWasCalled = true
+		if fetchNetworkDataWasCalled {
+			completion(.success((newsData, imageViews)))
+		}
 	}
 }
