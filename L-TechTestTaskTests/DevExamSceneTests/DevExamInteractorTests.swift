@@ -9,8 +9,8 @@ import XCTest
 @testable import L_TechTestTask
 
 final class DevExamInteractorTests: XCTestCase {
-	let presenter = DevExamPresenterSpy()
-	let worker = DevExamWorkerSpy()
+	private let presenter = DevExamPresenterSpy()
+	private let worker = DevExamWorkerSpy()
 
 	func test_viewIsReady_methodWorkedOutProperly() {
 		let sut = makeSut()

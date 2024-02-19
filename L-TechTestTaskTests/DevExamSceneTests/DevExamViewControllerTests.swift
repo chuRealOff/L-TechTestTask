@@ -8,24 +8,46 @@
 import XCTest
 @testable import L_TechTestTask
 
-final class DevExamViewControllerTests: XCTestCase {
+final class DevExamViewControllerTests: XCTestCase, Mockable {
+	private var newsDataList = [DTO.News]()
+	private let interactor = DevExamInteractorSpy()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+	func test_render_methodWorkedOutProperly() {
+		let sut = makeSut()
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+		sut.render(with: newsDataList)
+
+		XCTAssertTrue(interactor.viewIsReadyCalled, "'interactor.viewIsReady' не отработал!")
+	}
 }
 
 private extension DevExamViewControllerTests {
-	//
+	/// Создает DevExamViewController, подлежащего тестированию.
+	/// - Returns: DevExamViewController.
+	func makeSut() -> DevExamViewController {
+		let viewController = DevExamViewController(interactor: interactor)
+		populateNewsData()
+
+		return viewController
+	}
+
+	func populateNewsData() {
+		let (newsData, imageViews) = MockDataCreator().createMockData()
+
+		for (index, particularData) in newsData.enumerated() {
+			var news = [DTO.News]()
+
+			let image = imageViews[index].image
+
+			let story = DTO.News(
+				title: particularData.title,
+				text: particularData.text,
+				sort: particularData.sort,
+				date: particularData.date,
+				image: image
+			)
+			news.append(story)
+			newsDataList = news
+		}
+	}
 }

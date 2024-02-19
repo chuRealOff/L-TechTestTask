@@ -28,6 +28,7 @@
 		ABA0981B2B6A618100FABC55 /* DevExamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */; };
 		ABA0981D2B6A623200FABC55 /* DevExamDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */; };
 		ABA0981F2B6A628700FABC55 /* DevExamDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA0981E2B6A628700FABC55 /* DevExamDetailPresenter.swift */; };
+		ABA6701E2B8386DA00CBEF31 /* DevExamInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA6701D2B8386DA00CBEF31 /* DevExamInteractorSpy.swift */; };
 		ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */; };
 		ABC6EA392B7A3B7E00FA456F /* DevExamViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA382B7A3B7E00FA456F /* DevExamViewControllerTests.swift */; };
 		ABC6EA3B2B7A3BE400FA456F /* DevExamPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */; };
@@ -73,6 +74,7 @@
 		ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailViewController.swift; sourceTree = "<group>"; };
 		ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailInteractor.swift; sourceTree = "<group>"; };
 		ABA0981E2B6A628700FABC55 /* DevExamDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailPresenter.swift; sourceTree = "<group>"; };
+		ABA6701D2B8386DA00CBEF31 /* DevExamInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractorSpy.swift; sourceTree = "<group>"; };
 		ABC6EA2E2B7A357E00FA456F /* L-TechTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "L-TechTestTaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamInteractorTests.swift; sourceTree = "<group>"; };
 		ABC6EA382B7A3B7E00FA456F /* DevExamViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamViewControllerTests.swift; sourceTree = "<group>"; };
@@ -255,9 +257,10 @@
 		ABC6EA372B7A392D00FA456F /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
+				AB132B9D2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift */,
+				ABA6701D2B8386DA00CBEF31 /* DevExamInteractorSpy.swift */,
 				AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */,
 				AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */,
-				AB132B9D2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift */,
 			);
 			path = TestDoubles;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				AB0493722B7CA19C007DA83F /* Mockable.swift in Sources */,
 				AB132BA02B7CD672002D7740 /* MockDataCreator.swift in Sources */,
 				AB132B9E2B7CBF0F002D7740 /* DevExamViewControllerSpy.swift in Sources */,
+				ABA6701E2B8386DA00CBEF31 /* DevExamInteractorSpy.swift in Sources */,
 				ABC6EA312B7A357E00FA456F /* DevExamInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
