@@ -40,6 +40,7 @@ final class DevExamDetailViewController: UIViewController {
 	// MARK: - ViewController Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		view.backgroundColor = .systemBackground
 		setupUI()
 		interactor.viewIsReady()
 	}

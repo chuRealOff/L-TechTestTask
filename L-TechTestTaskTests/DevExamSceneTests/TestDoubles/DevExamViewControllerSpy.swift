@@ -11,9 +11,11 @@ import Foundation
 final class DevExamViewControllerSpy: IDevExamViewController {
 	// MARK: Internal Properties
 	private(set) var renderWasCalled = false
+	private(set) var newsData = [DTO.News]()
 
 	// MARK: Internal Methods
 	func render(with news: [DTO.News]) {
 		renderWasCalled = true
+		newsData = news
 	}
 }

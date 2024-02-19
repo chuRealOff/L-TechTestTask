@@ -113,6 +113,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB132BA12B7CD96D002D7740 /* DataMockingUtils */ = {
+			isa = PBXGroup;
+			children = (
+				AB04936F2B7C9A70007DA83F /* newsMockData.json */,
+				AB0493712B7CA19C007DA83F /* Mockable.swift */,
+				AB132B9F2B7CD672002D7740 /* MockDataCreator.swift */,
+			);
+			path = DataMockingUtils;
+			sourceTree = "<group>";
+		};
 		AB2E20722B7B420D0058697F /* DevExamSceneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +130,7 @@
 				ABC6EA302B7A357E00FA456F /* DevExamInteractorTests.swift */,
 				ABC6EA3C2B7A3C0000FA456F /* DevExamWorkerTests.swift */,
 				ABC6EA3A2B7A3BE400FA456F /* DevExamPresenterTests.swift */,
-				AB04936F2B7C9A70007DA83F /* newsMockData.json */,
-				AB0493712B7CA19C007DA83F /* Mockable.swift */,
-				AB132B9F2B7CD672002D7740 /* MockDataCreator.swift */,
+				AB132BA12B7CD96D002D7740 /* DataMockingUtils */,
 				ABC6EA372B7A392D00FA456F /* TestDoubles */,
 			);
 			path = DevExamSceneTests;

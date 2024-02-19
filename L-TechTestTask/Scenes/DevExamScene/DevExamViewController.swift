@@ -39,7 +39,7 @@ final class DevExamViewController: UITabBarController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		interactor.viewIsReady()
-		view.backgroundColor = .white
+		view.backgroundColor = .systemBackground
 		title = "Лента новостей"
 		setupUI()
 		makeRefreshPageNavigationItem()

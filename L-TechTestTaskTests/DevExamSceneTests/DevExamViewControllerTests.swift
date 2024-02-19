@@ -29,4 +29,3 @@ final class DevExamViewControllerTests: XCTestCase {
 private extension DevExamViewControllerTests {
 	//
 }
-

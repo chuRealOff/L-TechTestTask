@@ -10,16 +10,17 @@ import XCTest
 
 final class DevExamPresenterTests: XCTestCase, Mockable {
 	private let viewController = DevExamViewControllerSpy()
-	
+
 	func test_present_methodWorkedOut() {
 		let sut = makeSut()
 		let (newsData, imageViews) = MockDataCreator().createMockData()
 
 		sut.present(with: newsData, and: imageViews)
-		
+
 		XCTAssertTrue(viewController.renderWasCalled, "'viewController.render' не отработал!")
+		XCTAssertFalse(viewController.newsData.isEmpty, "Массив данных контроллера не должен быть пустым.")
 	}
-	
+
 }
 
 private extension DevExamPresenterTests {
@@ -28,7 +29,7 @@ private extension DevExamPresenterTests {
 	func makeSut() -> DevExamPresenter {
 		let presenter = DevExamPresenter()
 		presenter.viewController = viewController
-		
+
 		return presenter
 	}
 }
