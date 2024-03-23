@@ -22,6 +22,10 @@
 		AB5121FC2B7B738200226E83 /* DevExamWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */; };
 		AB5121FE2B7B76AA00226E83 /* DevExamPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */; };
 		AB81EC9F2B41911700320BA6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81EC9E2B41911700320BA6 /* FilterViewController.swift */; };
+		AB8D40E02BAEE3220068D4B8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D40DF2BAEE3220068D4B8 /* AuthViewController.swift */; };
+		AB8D40E22BAEE7020068D4B8 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D40E12BAEE7020068D4B8 /* AuthInteractor.swift */; };
+		AB8D40E42BAEE74A0068D4B8 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D40E32BAEE74A0068D4B8 /* AuthPresenter.swift */; };
+		AB8D40E62BAEE89F0068D4B8 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8D40E52BAEE89F0068D4B8 /* LoginModels.swift */; };
 		AB949BEF2B2DB6B900FA7E8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BEE2B2DB6B900FA7E8D /* SnapKit */; };
 		AB949BF12B2DB6B900FA7E8D /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = AB949BF02B2DB6B900FA7E8D /* SnapKit-Dynamic */; };
 		AB953F372B319BB5005B625B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AB953F362B319BB5005B625B /* Kingfisher */; };
@@ -71,6 +75,10 @@
 		AB5121FB2B7B738200226E83 /* DevExamWorkerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamWorkerSpy.swift; sourceTree = "<group>"; };
 		AB5121FD2B7B76AA00226E83 /* DevExamPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamPresenterSpy.swift; sourceTree = "<group>"; };
 		AB81EC9E2B41911700320BA6 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		AB8D40DF2BAEE3220068D4B8 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = SOURCE_ROOT; };
+		AB8D40E12BAEE7020068D4B8 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = SOURCE_ROOT; };
+		AB8D40E32BAEE74A0068D4B8 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = SOURCE_ROOT; };
+		AB8D40E52BAEE89F0068D4B8 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = SOURCE_ROOT; };
 		ABA0981A2B6A618100FABC55 /* DevExamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailViewController.swift; sourceTree = "<group>"; };
 		ABA0981C2B6A623200FABC55 /* DevExamDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailInteractor.swift; sourceTree = "<group>"; };
 		ABA0981E2B6A628700FABC55 /* DevExamDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExamDetailPresenter.swift; sourceTree = "<group>"; };
@@ -163,6 +171,10 @@
 		AB42C5082B2A4AF900CE98CD /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				AB8D40DF2BAEE3220068D4B8 /* AuthViewController.swift */,
+				AB8D40E12BAEE7020068D4B8 /* AuthInteractor.swift */,
+				AB8D40E32BAEE74A0068D4B8 /* AuthPresenter.swift */,
+				AB8D40E52BAEE89F0068D4B8 /* LoginModels.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -492,10 +504,14 @@
 				ABA0981B2B6A618100FABC55 /* DevExamDetailViewController.swift in Sources */,
 				AB42C5042B2A49E900CE98CD /* ICoordinator+finish().swift in Sources */,
 				ABCF8D8E2B24FAB600FB8DB4 /* AppDelegate.swift in Sources */,
+				AB8D40E62BAEE89F0068D4B8 /* LoginModels.swift in Sources */,
 				ABF206EF2B26449800C75164 /* DevExamPresenter.swift in Sources */,
+				AB8D40E02BAEE3220068D4B8 /* AuthViewController.swift in Sources */,
 				ABF206F32B2664E000C75164 /* Constants.swift in Sources */,
 				ABA0981D2B6A623200FABC55 /* DevExamDetailInteractor.swift in Sources */,
 				ABA0981F2B6A628700FABC55 /* DevExamDetailPresenter.swift in Sources */,
+				AB8D40E42BAEE74A0068D4B8 /* AuthPresenter.swift in Sources */,
+				AB8D40E22BAEE7020068D4B8 /* AuthInteractor.swift in Sources */,
 				ABCF8D902B24FAB600FB8DB4 /* SceneDelegate.swift in Sources */,
 				AB81EC9F2B41911700320BA6 /* FilterViewController.swift in Sources */,
 				AB42C4FF2B29AAE500CE98CD /* Assembler.swift in Sources */,
