@@ -24,4 +24,9 @@ enum LoginModels {
 		case success
 		case failure(String)
 	}
+	
+	/// Маска номера телефона.
+	struct CellPhoneMask: Decodable {
+		let phoneMask: String
+	}
 }
